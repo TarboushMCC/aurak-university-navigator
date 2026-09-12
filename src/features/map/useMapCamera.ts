@@ -1,0 +1,154 @@
+import { useGesture } from "@use-gesture/react";
+import { animate, useMotionValue } from "motion/react";
+import { useCallback, useEffect, useRef, useState } from "react";
+
+export interface CameraState {
+  /** Map-metre point currently centred in the viewport. */
+  cx: number;
+  cy: number;
+  /** Screen pixels per map metre. */
+  scale: number;
+  /** Degrees, clockwise. Heading-up rotation used in Guide View (Phase 2). */
+  rotationDeg: number;
+}
+
+export interface FitBoundsOptions {
+  /** Fraction of the viewport to leave as padding on each side (0-0.4). */
+  padding?: number;
+  rotationDeg?: number;
+  /** Animation duration in ms. 0 = instant (used for prefers-reduced-motion). */
+  durationMs?: number;
+  /** Don't zoom in past this many px/metre even if the bounds are tiny. */
+  maxScale?: number;
+}
+
+const MIN_SCALE = 0.15;
+const MAX_SCALE = 6;
+
+function clampScale(s: number) {
+  return Math.min(MAX_SCALE, Math.max(MIN_SCALE, s));
+}
+
+/**
+ * Owns the map camera (pan/zoom/rotate) as Motion springs, driven by
+ * @use-gesture/react for drag/wheel/pinch. Exposes `fitBounds`/`flyTo` for
+ * camera choreography (docs/PLAN.md §4.4).
+ */
+export function useMapCamera(
+  containerRef: React.RefObject<HTMLElement | null>,
+  initial: CameraState,
+) {
+  const cx = useMotionValue(initial.cx);
+  const cy = useMotionValue(initial.cy);
+  const scale = useMotionValue(initial.scale);
+  const rotationDeg = useMotionValue(initial.rotationDeg);
+
+  // Re-rendered copy for consumers that need plain numbers (e.g. computing
+  // screen-space label sizes). Motion values alone don't trigger re-renders.
+  const [snapshot, setSnapshot] = useState<CameraState>(initial);
+  useEffect(() => {
+    const update = () =>
+      setSnapshot({
+        cx: cx.get(),
+        cy: cy.get(),
+        scale: scale.get(),
+        rotationDeg: rotationDeg.get(),
+      });
+    const unsubs = [cx.on("change", update), cy.on("change", update), scale.on("change", update), rotationDeg.on("change", update)];
+    return () => unsubs.forEach((u) => u());
+  }, [cx, cy, scale, rotationDeg]);
+
+  const reducedMotion = useRef(
+    typeof window !== "undefined" &&
+      window.matchMedia?.("(prefers-reduced-motion: reduce)").matches,
+  );
+
+  const flyTo = useCallback(
+    (target: Partial<CameraState>, durationMs = 700) => {
+      const duration = reducedMotion.current ? 0 : durationMs / 1000;
+      if (target.cx !== undefined) animate(cx, target.cx, { duration, ease: "easeInOut" });
+      if (target.cy !== undefined) animate(cy, target.cy, { duration, ease: "easeInOut" });
+      if (target.scale !== undefined)
+        animate(scale, clampScale(target.scale), { duration, ease: "easeInOut" });
+      if (target.rotationDeg !== undefined)
+        animate(rotationDeg, target.rotationDeg, { duration, ease: "easeInOut" });
+    },
+    [cx, cy, scale, rotationDeg],
+  );
+
+  const fitBounds = useCallback(
+    (bbox: [number, number, number, number], opts: FitBoundsOptions = {}) => {
+      const el = containerRef.current;
+      if (!el) return;
+      const { width, height } = el.getBoundingClientRect();
+      if (width === 0 || height === 0) return;
+      const padding = opts.padding ?? 0.1;
+      const [minX, minY, maxX, maxY] = bbox;
+      const boxW = Math.max(1, maxX - minX);
+      const boxH = Math.max(1, maxY - minY);
+      const availW = width * (1 - padding * 2);
+      const availH = height * (1 - padding * 2);
+      let nextScale = Math.min(availW / boxW, availH / boxH);
+      if (opts.maxScale) nextScale = Math.min(nextScale, opts.maxScale);
+      flyTo(
+        {
+          cx: (minX + maxX) / 2,
+          cy: (minY + maxY) / 2,
+          scale: clampScale(nextScale),
+          rotationDeg: opts.rotationDeg ?? 0,
+        },
+        opts.durationMs ?? 700,
+      );
+    },
+    [containerRef, flyTo],
+  );
+
+  // --- Gestures ---------------------------------------------------------
+  // Bound directly to `containerRef` (via `target` in the config below), so
+  // there is nothing to spread onto the JSX element.
+
+  useGesturesOnCamera(containerRef, cx, cy, scale);
+
+  return { cx, cy, scale, rotationDeg, snapshot, fitBounds, flyTo };
+}
+
+function useGesturesOnCamera(
+  containerRef: React.RefObject<HTMLElement | null>,
+  cx: ReturnType<typeof useMotionValue<number>>,
+  cy: ReturnType<typeof useMotionValue<number>>,
+  scale: ReturnType<typeof useMotionValue<number>>,
+) {
+  const dragStart = useRef({ cx: 0, cy: 0 });
+  const pinchStartScale = useRef(1);
+
+  useGesture(
+    {
+      onDragStart: () => {
+        dragStart.current = { cx: cx.get(), cy: cy.get() };
+      },
+      onDrag: ({ offset: [dx, dy], pinching }) => {
+        if (pinching) return;
+        const s = scale.get();
+        cx.set(dragStart.current.cx - dx / s);
+        cy.set(dragStart.current.cy - dy / s);
+      },
+      onWheel: ({ delta: [, dy], event }) => {
+        event.preventDefault();
+        const factor = Math.exp(-dy * 0.0015);
+        scale.set(clampScale(scale.get() * factor));
+      },
+      onPinchStart: () => {
+        pinchStartScale.current = scale.get();
+      },
+      onPinch: ({ offset: [d] }) => {
+        scale.set(clampScale(pinchStartScale.current * d));
+      },
+    },
+    {
+      target: containerRef,
+      eventOptions: { passive: false },
+      drag: { filterTaps: true },
+      wheel: { eventOptions: { passive: false } },
+    },
+  );
+}

@@ -1,0 +1,422 @@
+[
+  {
+    "id": "bldg-h",
+    "code": "H",
+    "mapNumber": 2,
+    "name": "RAK Bank School of Business",
+    "aliases": [
+      "business school",
+      "school of business",
+      "rak bank"
+    ],
+    "floors": [
+      0
+    ],
+    "category": "academic",
+    "heightM": 14,
+    "labelAt": [
+      586.5732032744402,
+      269.27807264866254
+    ]
+  },
+  {
+    "id": "bldg-j",
+    "code": "J",
+    "mapNumber": 3,
+    "name": "Saqr Library",
+    "aliases": [
+      "library",
+      "main library",
+      "saqr"
+    ],
+    "floors": [
+      0
+    ],
+    "category": "academic",
+    "heightM": 14,
+    "labelAt": [
+      494.65717942731,
+      294.4250287785675
+    ]
+  },
+  {
+    "id": "bldg-k",
+    "code": "K",
+    "mapNumber": 4,
+    "name": "Abdullah Bin Ali Al Sharhan School of Arts and Sciences",
+    "aliases": [
+      "arts and sciences",
+      "school of arts and sciences",
+      "al sharhan"
+    ],
+    "floors": [
+      0
+    ],
+    "category": "academic",
+    "heightM": 14,
+    "labelAt": [
+      543.773167855858,
+      91.53878755584377
+    ]
+  },
+  {
+    "id": "bldg-g",
+    "code": "G",
+    "mapNumber": 5,
+    "name": "School of Engineering and Computing",
+    "aliases": [
+      "engineering",
+      "computing",
+      "school of engineering"
+    ],
+    "floors": [
+      0
+    ],
+    "category": "academic",
+    "heightM": 15,
+    "labelAt": [
+      379.86596815414356,
+      178.1922323649608
+    ]
+  },
+  {
+    "id": "bldg-l",
+    "code": "L",
+    "mapNumber": 6,
+    "name": "Engineering Labs",
+    "aliases": [
+      "labs",
+      "engineering labs"
+    ],
+    "floors": [
+      0
+    ],
+    "category": "academic",
+    "heightM": 10,
+    "labelAt": [
+      369.5005965720791,
+      90.41835053940264
+    ]
+  },
+  {
+    "id": "bldg-c",
+    "code": "C",
+    "mapNumber": 7,
+    "name": "Recreation Hub",
+    "aliases": [
+      "recreation",
+      "recreation hub"
+    ],
+    "floors": [
+      0
+    ],
+    "category": "facilities",
+    "heightM": 8,
+    "labelAt": [
+      210.22575118412823,
+      163.484006867675
+    ]
+  },
+  {
+    "id": "bldg-d",
+    "code": "D",
+    "mapNumber": 8,
+    "name": "Admission and Registration",
+    "aliases": [
+      "admission",
+      "registration",
+      "admissions"
+    ],
+    "floors": [
+      0
+    ],
+    "category": "services",
+    "heightM": 9,
+    "labelAt": [
+      336.1583577239146,
+      397.1398574292132
+    ]
+  },
+  {
+    "id": "bldg-a",
+    "code": "A",
+    "mapNumber": 9,
+    "name": "Student Life Hub",
+    "aliases": [
+      "student life",
+      "student life hub"
+    ],
+    "floors": [
+      0
+    ],
+    "category": "services",
+    "heightM": 9,
+    "labelAt": [
+      221.970270147462,
+      324.7287798325004
+    ]
+  },
+  {
+    "id": "bldg-sports-hall",
+    "mapNumber": 10,
+    "name": "Sports Hall",
+    "aliases": [
+      "sports hall",
+      "gym"
+    ],
+    "floors": [
+      0
+    ],
+    "category": "sports",
+    "heightM": 10,
+    "labelAt": [
+      71.89734432898867,
+      198.99326241618442
+    ]
+  },
+  {
+    "id": "bldg-warehouse",
+    "mapNumber": 13,
+    "name": "Warehouse and Stores",
+    "aliases": [
+      "warehouse",
+      "stores"
+    ],
+    "floors": [
+      0
+    ],
+    "category": "facilities",
+    "heightM": 7,
+    "labelAt": [
+      62.52141819170094,
+      238.90444758888847
+    ]
+  },
+  {
+    "id": "bldg-mosque",
+    "mapNumber": 17,
+    "name": "AURAK Mosque",
+    "aliases": [
+      "mosque",
+      "masjid",
+      "prayer room"
+    ],
+    "floors": [
+      0
+    ],
+    "category": "landmark",
+    "heightM": 12,
+    "labelAt": [
+      515.6376182024932,
+      398.01185017926764
+    ]
+  },
+  {
+    "id": "bldg-zeh",
+    "mapNumber": 18,
+    "name": "Zero Energy House (Solar Decathlon)",
+    "aliases": [
+      "zero energy house",
+      "solar decathlon"
+    ],
+    "floors": [
+      0
+    ],
+    "category": "landmark",
+    "heightM": 6,
+    "labelAt": [
+      412.5246955388662,
+      79.17711791239753
+    ]
+  },
+  {
+    "id": "bldg-temp",
+    "mapNumber": 19,
+    "name": "Temporary Buildings",
+    "aliases": [
+      "temporary buildings"
+    ],
+    "floors": [
+      0
+    ],
+    "category": "facilities",
+    "heightM": 6,
+    "labelAt": [
+      155.9385994726411,
+      179.87306131433482
+    ]
+  },
+  {
+    "id": "bldg-outdoor-comfort",
+    "mapNumber": 20,
+    "name": "RAK Center for Outdoor Comfort",
+    "aliases": [
+      "outdoor comfort",
+      "outdoor comfort center"
+    ],
+    "floors": [
+      0
+    ],
+    "category": "landmark",
+    "heightM": 6,
+    "labelAt": [
+      164.98951400001738,
+      145.03148204591866
+    ]
+  },
+  {
+    "id": "bldg-facilities-mgmt",
+    "mapNumber": 21,
+    "name": "Office of Facilities Management",
+    "aliases": [
+      "facilities management"
+    ],
+    "floors": [
+      0
+    ],
+    "category": "facilities",
+    "heightM": 7,
+    "labelAt": [
+      157.55234274022365,
+      403.25749425389546
+    ]
+  },
+  {
+    "id": "bldg-admin",
+    "mapNumber": 22,
+    "name": "Admin Building",
+    "aliases": [
+      "admin",
+      "administration"
+    ],
+    "floors": [
+      0
+    ],
+    "category": "facilities",
+    "heightM": 8,
+    "labelAt": [
+      200.74114155238289,
+      425.41864103867357
+    ]
+  },
+  {
+    "id": "bldg-res-1",
+    "name": "Residential Hall 1",
+    "aliases": [
+      "residence 1",
+      "dorm 1",
+      "residential halls",
+      "dorms",
+      "student housing"
+    ],
+    "floors": [
+      0
+    ],
+    "category": "residence",
+    "heightM": 24,
+    "labelAt": [
+      673.9531811157691,
+      428.4615739163449
+    ]
+  },
+  {
+    "id": "bldg-res-2",
+    "name": "Residential Hall 2",
+    "aliases": [
+      "residence 2",
+      "dorm 2",
+      "residential halls",
+      "dorms",
+      "student housing"
+    ],
+    "floors": [
+      0
+    ],
+    "category": "residence",
+    "heightM": 24,
+    "labelAt": [
+      609.922252845257,
+      431.86366382420607
+    ]
+  },
+  {
+    "id": "bldg-res-3",
+    "name": "Residential Hall 3",
+    "aliases": [
+      "residence 3",
+      "dorm 3",
+      "residential halls",
+      "dorms",
+      "student housing"
+    ],
+    "floors": [
+      0
+    ],
+    "category": "residence",
+    "heightM": 24,
+    "labelAt": [
+      485.983110117232,
+      427.72234428179047
+    ]
+  },
+  {
+    "id": "bldg-res-4",
+    "name": "Residential Hall 4",
+    "aliases": [
+      "residence 4",
+      "dorm 4",
+      "residential halls",
+      "dorms",
+      "student housing"
+    ],
+    "floors": [
+      0
+    ],
+    "category": "residence",
+    "heightM": 24,
+    "labelAt": [
+      414.16393253560193,
+      428.1782091234232
+    ]
+  },
+  {
+    "id": "bldg-res-5",
+    "name": "Residential Hall 5",
+    "aliases": [
+      "residence 5",
+      "dorm 5",
+      "residential halls",
+      "dorms",
+      "student housing"
+    ],
+    "floors": [
+      0
+    ],
+    "category": "residence",
+    "heightM": 24,
+    "labelAt": [
+      299.8017863753851,
+      426.34534471439287
+    ]
+  },
+  {
+    "id": "bldg-res-6",
+    "name": "Residential Hall 6",
+    "aliases": [
+      "residence 6",
+      "dorm 6",
+      "residential halls",
+      "dorms",
+      "student housing"
+    ],
+    "floors": [
+      0
+    ],
+    "category": "residence",
+    "heightM": 24,
+    "labelAt": [
+      248.89405799948645,
+      437.4616145502064
+    ]
+  }
+]

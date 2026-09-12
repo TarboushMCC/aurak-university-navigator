@@ -1,0 +1,23 @@
+{
+  "campus": {
+    "id": "aurak",
+    "name": "American University of Ras Al Khaimah",
+    "shortName": "AURAK",
+    "defaultLevelId": "ground",
+    "walkingSpeedMps": {
+      "default": 1.3,
+      "accessible": 1
+    }
+  },
+  "levels": [
+    {
+      "id": "ground",
+      "name": "Campus (outdoor)",
+      "kind": "site",
+      "bounds": {
+        "width": 560,
+        "height": 420
+      }
+    }
+  ]
+}

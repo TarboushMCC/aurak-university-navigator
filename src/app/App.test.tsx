@@ -4,8 +4,9 @@ import { describe, expect, it } from "vitest";
 import { App } from "@/app/App";
 
 describe("App", () => {
-  it("renders the home page shell", () => {
+  it("renders the home page shell with campus data", () => {
     render(<App />);
     expect(screen.getByText(/University Navigator/i)).toBeInTheDocument();
+    expect(screen.getByText("AURAK")).toBeInTheDocument();
   });
 });
