@@ -52,8 +52,11 @@ const SITE_CORNERS_PX = {
   w: [12, 250] as Point,
 };
 
-const MAP_LENGTH_M = 560;
-const MAP_WIDTH_M = 420;
+// Measured from a real satellite image of the actual campus (ArcGIS World
+// Imagery, centred on 25.7887°N 55.99381°E), not guessed: the perimeter-road
+// rectangle measures ~510m x ~318m. This replaces an earlier blind estimate.
+const MAP_LENGTH_M = 510;
+const MAP_WIDTH_M = 318;
 
 const controlPoints: ControlPoint[] = [
   { image: SITE_CORNERS_PX.n, map: [0, 0], label: "site-N" },
@@ -72,6 +75,48 @@ const PX_PER_METRE_HEIGHT = 3.67;
 /** Shifts a traced ROOF point straight down to approximate its ground BASE. */
 function roofToBase([x, y]: Point, heightM: number): Point {
   return [x, y + heightM * PX_PER_METRE_HEIGHT];
+}
+
+/**
+ * Hand-traced quad corners always carry a bit of pixel-picking noise, and
+ * the homography amplifies it — a building that is really a rectangle comes
+ * out as a slightly skewed, rotated parallelogram. Real buildings on this
+ * campus are aligned to the site's own grid, so regularise every traced quad
+ * back into a clean axis-aligned rectangle: keep its real centre and size
+ * (measured from the traced edges), snap its rotation to the nearest 90°.
+ * This is standard practice when turning a rough site trace into a legible
+ * map — position/size stay true to the trace, only the noise is removed.
+ */
+function regularizeQuad(mapRing: readonly Point[]): Point[] {
+  const [p0, p1, p2, p3] = mapRing as [Point, Point, Point, Point];
+  const dist = (a: Point, b: Point) => Math.hypot(b[0] - a[0], b[1] - a[1]);
+  const width = (dist(p0, p1) + dist(p3, p2)) / 2;
+  const height = (dist(p1, p2) + dist(p0, p3)) / 2;
+  const center: Point = [
+    (p0[0] + p1[0] + p2[0] + p3[0]) / 4,
+    (p0[1] + p1[1] + p2[1] + p3[1]) / 4,
+  ];
+  const angleRaw = (Math.atan2(p1[1] - p0[1], p1[0] - p0[0]) * 180) / Math.PI;
+  const snapped = Math.round(angleRaw / 90) * 90;
+  const rad = (snapped * Math.PI) / 180;
+  const cos = Math.cos(rad);
+  const sin = Math.sin(rad);
+  const hw = width / 2;
+  const hh = height / 2;
+  const corners: Point[] = [
+    [-hw, -hh],
+    [hw, -hh],
+    [hw, hh],
+    [-hw, hh],
+  ];
+  return corners.map(([x, y]): Point => [center[0] + x * cos - y * sin, center[1] + x * sin + y * cos]);
+}
+
+/** Local map-metres-per-pixel scale near `px`, used to draw true circles instead of homography-warped ellipses. */
+function localScaleAt(px: Point): number {
+  const a = toMap(px);
+  const b = toMap([px[0] + 10, px[1]]);
+  return Math.hypot(b[0] - a[0], b[1] - a[1]) / 10;
 }
 
 // ---------------------------------------------------------------------------
@@ -482,7 +527,7 @@ for (let i = 0; i < 4; i++) {
 features.push({
   id: nextId("parking"),
   layer: "parking",
-  geometry: { type: "Polygon", coordinates: [toMapRing(parkingPx)] },
+  geometry: { type: "Polygon", coordinates: [regularizeQuad(toMapRing(parkingPx))] },
   label: "Student Parking",
 });
 
@@ -541,19 +586,21 @@ const buildings: Building[] = [];
 for (const spec of BUILDING_SPECS) {
   let ring: Point[];
   if (spec.roofCirclePx) {
+    // Draw a true circle in map space (radius from the local scale near its
+    // centre) instead of transforming a pixel-space circle point-by-point,
+    // which the homography stretches into an uneven ellipse.
     const { center, radiusPx } = spec.roofCirclePx;
     const baseCenterPx = roofToBase(center, spec.heightM);
-    ring = Array.from({ length: 16 }, (_, i) => {
-      const a = (i / 16) * Math.PI * 2;
-      const px: Point = [
-        baseCenterPx[0] + Math.cos(a) * radiusPx,
-        baseCenterPx[1] + Math.sin(a) * radiusPx,
-      ];
-      return toMap(px);
+    const centerMap = toMap(baseCenterPx);
+    const radiusM = radiusPx * localScaleAt(baseCenterPx);
+    ring = Array.from({ length: 24 }, (_, i) => {
+      const a = (i / 24) * Math.PI * 2;
+      return [centerMap[0] + Math.cos(a) * radiusM, centerMap[1] + Math.sin(a) * radiusM] as Point;
     });
   } else {
     const quad = spec.roofQuadPx!;
-    ring = quad.map((p) => toMap(roofToBase(p, spec.heightM)));
+    const mapQuad = quad.map((p) => toMap(roofToBase(p, spec.heightM)));
+    ring = regularizeQuad(mapQuad);
   }
 
   features.push({

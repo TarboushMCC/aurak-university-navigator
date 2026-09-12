@@ -15,8 +15,8 @@
       "name": "Campus (outdoor)",
       "kind": "site",
       "bounds": {
-        "width": 560,
-        "height": 420
+        "width": 510,
+        "height": 318
       }
     }
   ]
