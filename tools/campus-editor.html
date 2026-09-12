@@ -276,6 +276,7 @@ function render() {
     label.setAttribute("x", c[0]); label.setAttribute("y", c[1]);
     label.setAttribute("text-anchor", "middle");
     label.classList.add("label-tag");
+    label.dataset.labelFor = s.id;
     label.textContent = s.label;
     g.appendChild(label);
 
@@ -319,11 +320,19 @@ function renderSidebar() {
     list.appendChild(row);
   }
   list.querySelectorAll("input[type=text]").forEach((inp) => {
+    // Update the data model and the on-canvas label directly here, WITHOUT
+    // calling render()/renderSidebar() — those rebuild this very <input>'s
+    // DOM node from scratch, which drops focus and the cursor position after
+    // every single keystroke (you'd have to click back in after each letter).
     inp.addEventListener("input", (e) => {
       const s = shapes.find((s) => s.id === e.target.dataset.id);
-      if (s) { s.label = e.target.value; render(); }
+      if (!s) return;
+      s.label = e.target.value;
+      const labelEl = overlay.querySelector(`[data-label-for="${s.id}"]`);
+      if (labelEl) labelEl.textContent = s.label;
     });
     inp.addEventListener("pointerdown", (e) => {
+      if (selectedId === e.target.dataset.id) return; // already selected, don't rebuild mid-edit
       selectedId = e.target.dataset.id;
       render();
     });
