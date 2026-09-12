@@ -1,62 +1,92 @@
 [
   {
-    "id": "bldg-h",
-    "code": "H",
-    "mapNumber": 2,
-    "name": "RAK Bank School of Business",
+    "id": "bldg-sports-hall",
+    "mapNumber": 10,
+    "name": "Sports Hall",
     "aliases": [
-      "business school",
-      "school of business",
-      "rak bank"
+      "sports hall",
+      "gym"
     ],
     "floors": [
       0
     ],
-    "category": "academic",
-    "heightM": 14,
+    "category": "sports",
+    "heightM": 9,
     "labelAt": [
-      539.6951868552462,
-      222.8330186098935
+      85.19797545016557,
+      133.97289082965148
     ]
   },
   {
-    "id": "bldg-j",
-    "code": "J",
-    "mapNumber": 3,
-    "name": "Saqr Library",
+    "id": "bldg-warehouse",
+    "mapNumber": 13,
+    "name": "Warehouse and Stores",
     "aliases": [
-      "library",
-      "main library",
-      "saqr"
+      "warehouse",
+      "stores"
     ],
     "floors": [
       0
     ],
-    "category": "academic",
-    "heightM": 14,
+    "category": "facilities",
+    "heightM": 6,
     "labelAt": [
-      450.8289150981329,
-      241.3441302198122
+      37.58734211036717,
+      147.37017991261666
     ]
   },
   {
-    "id": "bldg-k",
-    "code": "K",
-    "mapNumber": 4,
-    "name": "Abdullah Bin Ali Al Sharhan School of Arts and Sciences",
+    "id": "bldg-c",
+    "code": "C",
+    "mapNumber": 7,
+    "name": "Recreation Hub",
     "aliases": [
-      "arts and sciences",
-      "school of arts and sciences",
-      "al sharhan"
+      "recreation",
+      "recreation hub"
     ],
     "floors": [
       0
     ],
-    "category": "academic",
-    "heightM": 14,
+    "category": "facilities",
+    "heightM": 7,
     "labelAt": [
-      492.9319708236932,
-      73.13727622633708
+      184.42855862153488,
+      117.99919999996229
+    ]
+  },
+  {
+    "id": "bldg-temp",
+    "mapNumber": 19,
+    "name": "Temporary Buildings",
+    "aliases": [
+      "temporary buildings"
+    ],
+    "floors": [
+      0
+    ],
+    "category": "facilities",
+    "heightM": 6,
+    "labelAt": [
+      55.12810176187185,
+      159.73690829689218
+    ]
+  },
+  {
+    "id": "bldg-outdoor-comfort",
+    "mapNumber": 20,
+    "name": "RAK Center for Outdoor Comfort",
+    "aliases": [
+      "outdoor comfort",
+      "outdoor comfort center"
+    ],
+    "floors": [
+      0
+    ],
+    "category": "landmark",
+    "heightM": 5,
+    "labelAt": [
+      125.29114036789056,
+      170.04251528378845
     ]
   },
   {
@@ -75,8 +105,8 @@
     "category": "academic",
     "heightM": 15,
     "labelAt": [
-      340.269939008233,
-      135.21439182097524
+      299.6964077599942,
+      183.4398043667536
     ]
   },
   {
@@ -94,27 +124,46 @@
     "category": "academic",
     "heightM": 9,
     "labelAt": [
-      314.6869369575139,
-      58.61843548960596
+      260.60557196521233,
+      159.73690829689218
     ]
   },
   {
-    "id": "bldg-c",
-    "code": "C",
-    "mapNumber": 7,
-    "name": "Recreation Hub",
+    "id": "bldg-zeh",
+    "mapNumber": 18,
+    "name": "Zero Energy House (Solar Decathlon)",
     "aliases": [
-      "recreation",
-      "recreation hub"
+      "zero energy house",
+      "solar decathlon"
     ],
     "floors": [
       0
     ],
-    "category": "facilities",
-    "heightM": 7,
+    "category": "landmark",
+    "heightM": 6,
     "labelAt": [
-      192.95119557453393,
-      115.56540196850881
+      280.6521544240748,
+      144.27849781654777
+    ]
+  },
+  {
+    "id": "bldg-k",
+    "code": "K",
+    "mapNumber": 4,
+    "name": "Abdullah Bin Ali Al Sharhan School of Arts and Sciences",
+    "aliases": [
+      "arts and sciences",
+      "school of arts and sciences",
+      "al sharhan"
+    ],
+    "floors": [
+      0
+    ],
+    "category": "academic",
+    "heightM": 14,
+    "labelAt": [
+      427.4933709352425,
+      186.01620611347766
     ]
   },
   {
@@ -133,8 +182,8 @@
     "category": "services",
     "heightM": 9,
     "labelAt": [
-      308.229880383913,
-      302.36704852352926
+      214.4984323098286,
+      298.8626026199918
     ]
   },
   {
@@ -152,44 +201,48 @@
     "category": "services",
     "heightM": 10,
     "labelAt": [
-      195.1288757078663,
-      243.7090064142517
+      155.86217861765584,
+      238.57480174664863
     ]
   },
   {
-    "id": "bldg-sports-hall",
-    "mapNumber": 10,
-    "name": "Sports Hall",
+    "id": "bldg-h",
+    "code": "H",
+    "mapNumber": 2,
+    "name": "RAK Bank School of Business",
     "aliases": [
-      "sports hall",
-      "gym"
+      "business school",
+      "school of business",
+      "rak bank"
     ],
     "floors": [
       0
     ],
-    "category": "sports",
-    "heightM": 9,
+    "category": "academic",
+    "heightM": 14,
     "labelAt": [
-      63.93113438341806,
-      151.20666577412288
+      342.295395485077,
+      282.3736314409578
     ]
   },
   {
-    "id": "bldg-warehouse",
-    "mapNumber": 13,
-    "name": "Warehouse and Stores",
+    "id": "bldg-j",
+    "code": "J",
+    "mapNumber": 3,
+    "name": "Saqr Library",
     "aliases": [
-      "warehouse",
-      "stores"
+      "library",
+      "main library",
+      "saqr"
     ],
     "floors": [
       0
     ],
-    "category": "facilities",
-    "heightM": 6,
+    "category": "academic",
+    "heightM": 14,
     "labelAt": [
-      45.80185624772736,
-      165.24709414051327
+      410.4537758452094,
+      292.16395807850927
     ]
   },
   {
@@ -207,61 +260,8 @@
     "category": "landmark",
     "heightM": 10,
     "labelAt": [
-      480.39235908175124,
-      313.84179254904006
-    ]
-  },
-  {
-    "id": "bldg-zeh",
-    "mapNumber": 18,
-    "name": "Zero Energy House (Solar Decathlon)",
-    "aliases": [
-      "zero energy house",
-      "solar decathlon"
-    ],
-    "floors": [
-      0
-    ],
-    "category": "landmark",
-    "heightM": 6,
-    "labelAt": [
-      363.6274636528232,
-      42.89000063066707
-    ]
-  },
-  {
-    "id": "bldg-temp",
-    "mapNumber": 19,
-    "name": "Temporary Buildings",
-    "aliases": [
-      "temporary buildings"
-    ],
-    "floors": [
-      0
-    ],
-    "category": "facilities",
-    "heightM": 6,
-    "labelAt": [
-      122.26346041257048,
-      125.29254468820079
-    ]
-  },
-  {
-    "id": "bldg-outdoor-comfort",
-    "mapNumber": 20,
-    "name": "RAK Center for Outdoor Comfort",
-    "aliases": [
-      "outdoor comfort",
-      "outdoor comfort center"
-    ],
-    "floors": [
-      0
-    ],
-    "category": "landmark",
-    "heightM": 5,
-    "labelAt": [
-      151.4152135377659,
-      131.17631108886962
+      455.55858637765004,
+      308.13764890819846
     ]
   },
   {
@@ -277,8 +277,8 @@
     "category": "facilities",
     "heightM": 6,
     "labelAt": [
-      143.3656044519535,
-      311.9362712502673
+      5.011645614715622,
+      249.91096943223454
     ]
   },
   {
@@ -295,8 +295,8 @@
     "category": "facilities",
     "heightM": 7,
     "labelAt": [
-      187.95315150575428,
-      319.6992621486067
+      50.116456147156214,
+      249.91096943223454
     ]
   },
   {
@@ -315,8 +315,8 @@
     "category": "residence",
     "heightM": 16,
     "labelAt": [
-      610.7773242879628,
-      321.4923658953176
+      135.3144315973218,
+      293.70979912654366
     ]
   },
   {
@@ -335,8 +335,8 @@
     "category": "residence",
     "heightM": 16,
     "labelAt": [
-      550.1834076472417,
-      322.0472158912038
+      90.20962106488119,
+      291.1333973798196
     ]
   },
   {
@@ -355,8 +355,8 @@
     "category": "residence",
     "heightM": 16,
     "labelAt": [
-      436.39737337068834,
-      322.4320877215265
+      174.40526739210364,
+      291.1333973798196
     ]
   },
   {
@@ -375,8 +375,8 @@
     "category": "residence",
     "heightM": 16,
     "labelAt": [
-      373.8774435139645,
-      321.03003540092834
+      254.59159722755362,
+      293.70979912654366
     ]
   },
   {
@@ -395,8 +395,8 @@
     "category": "residence",
     "heightM": 16,
     "labelAt": [
-      271.6036254583757,
-      323.30962754171463
+      314.73134460414104,
+      327.7183021833014
     ]
   },
   {
@@ -415,8 +415,8 @@
     "category": "residence",
     "heightM": 16,
     "labelAt": [
-      224.36959690348428,
-      323.9191311356283
+      230.03453371544708,
+      314.32101310033624
     ]
   }
 ]

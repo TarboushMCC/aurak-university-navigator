@@ -1,45 +1,67 @@
 [
   {
-    "id": "place.h",
-    "type": "building",
-    "name": "RAK Bank School of Business",
-    "buildingId": "bldg-h",
+    "id": "place.sports-hall",
+    "type": "sports",
+    "name": "Sports Hall",
+    "buildingId": "bldg-sports-hall",
     "aliases": [
-      "business school",
-      "school of business",
-      "rak bank"
+      "sports hall",
+      "gym"
     ],
     "anchors": [],
     "startable": true,
-    "mapNumber": 2
+    "mapNumber": 10
   },
   {
-    "id": "place.j",
+    "id": "place.warehouse",
     "type": "building",
-    "name": "Saqr Library",
-    "buildingId": "bldg-j",
+    "name": "Warehouse and Stores",
+    "buildingId": "bldg-warehouse",
     "aliases": [
-      "library",
-      "main library",
-      "saqr"
+      "warehouse",
+      "stores"
     ],
     "anchors": [],
     "startable": true,
-    "mapNumber": 3
+    "mapNumber": 13
   },
   {
-    "id": "place.k",
+    "id": "place.c",
     "type": "building",
-    "name": "Abdullah Bin Ali Al Sharhan School of Arts and Sciences",
-    "buildingId": "bldg-k",
+    "name": "Recreation Hub",
+    "buildingId": "bldg-c",
     "aliases": [
-      "arts and sciences",
-      "school of arts and sciences",
-      "al sharhan"
+      "recreation",
+      "recreation hub"
     ],
     "anchors": [],
     "startable": true,
-    "mapNumber": 4
+    "mapNumber": 7
+  },
+  {
+    "id": "place.temp",
+    "type": "building",
+    "name": "Temporary Buildings",
+    "buildingId": "bldg-temp",
+    "aliases": [
+      "temporary buildings"
+    ],
+    "anchors": [],
+    "startable": true,
+    "mapNumber": 19
+  },
+  {
+    "id": "place.outdoor-comfort",
+    "type": "landmark",
+    "name": "RAK Center for Outdoor Comfort",
+    "buildingId": "bldg-outdoor-comfort",
+    "aliases": [
+      "outdoor comfort",
+      "outdoor comfort center"
+    ],
+    "anchors": [],
+    "startable": true,
+    "mapNumber": 20
   },
   {
     "id": "place.g",
@@ -69,17 +91,31 @@
     "mapNumber": 6
   },
   {
-    "id": "place.c",
-    "type": "building",
-    "name": "Recreation Hub",
-    "buildingId": "bldg-c",
+    "id": "place.zeh",
+    "type": "landmark",
+    "name": "Zero Energy House (Solar Decathlon)",
+    "buildingId": "bldg-zeh",
     "aliases": [
-      "recreation",
-      "recreation hub"
+      "zero energy house",
+      "solar decathlon"
     ],
     "anchors": [],
     "startable": true,
-    "mapNumber": 7
+    "mapNumber": 18
+  },
+  {
+    "id": "place.k",
+    "type": "building",
+    "name": "Abdullah Bin Ali Al Sharhan School of Arts and Sciences",
+    "buildingId": "bldg-k",
+    "aliases": [
+      "arts and sciences",
+      "school of arts and sciences",
+      "al sharhan"
+    ],
+    "anchors": [],
+    "startable": true,
+    "mapNumber": 4
   },
   {
     "id": "place.d",
@@ -109,30 +145,32 @@
     "mapNumber": 9
   },
   {
-    "id": "place.sports-hall",
-    "type": "sports",
-    "name": "Sports Hall",
-    "buildingId": "bldg-sports-hall",
+    "id": "place.h",
+    "type": "building",
+    "name": "RAK Bank School of Business",
+    "buildingId": "bldg-h",
     "aliases": [
-      "sports hall",
-      "gym"
+      "business school",
+      "school of business",
+      "rak bank"
     ],
     "anchors": [],
     "startable": true,
-    "mapNumber": 10
+    "mapNumber": 2
   },
   {
-    "id": "place.warehouse",
+    "id": "place.j",
     "type": "building",
-    "name": "Warehouse and Stores",
-    "buildingId": "bldg-warehouse",
+    "name": "Saqr Library",
+    "buildingId": "bldg-j",
     "aliases": [
-      "warehouse",
-      "stores"
+      "library",
+      "main library",
+      "saqr"
     ],
     "anchors": [],
     "startable": true,
-    "mapNumber": 13
+    "mapNumber": 3
   },
   {
     "id": "place.mosque",
@@ -147,44 +185,6 @@
     "anchors": [],
     "startable": true,
     "mapNumber": 17
-  },
-  {
-    "id": "place.zeh",
-    "type": "landmark",
-    "name": "Zero Energy House (Solar Decathlon)",
-    "buildingId": "bldg-zeh",
-    "aliases": [
-      "zero energy house",
-      "solar decathlon"
-    ],
-    "anchors": [],
-    "startable": true,
-    "mapNumber": 18
-  },
-  {
-    "id": "place.temp",
-    "type": "building",
-    "name": "Temporary Buildings",
-    "buildingId": "bldg-temp",
-    "aliases": [
-      "temporary buildings"
-    ],
-    "anchors": [],
-    "startable": true,
-    "mapNumber": 19
-  },
-  {
-    "id": "place.outdoor-comfort",
-    "type": "landmark",
-    "name": "RAK Center for Outdoor Comfort",
-    "buildingId": "bldg-outdoor-comfort",
-    "aliases": [
-      "outdoor comfort",
-      "outdoor comfort center"
-    ],
-    "anchors": [],
-    "startable": true,
-    "mapNumber": 20
   },
   {
     "id": "place.facilities-mgmt",
