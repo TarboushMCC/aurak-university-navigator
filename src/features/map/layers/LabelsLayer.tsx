@@ -27,7 +27,9 @@ export function LabelsLayer({
         if (lowPriority && scale < 0.55 && !isEmphasised) return null;
         const [x, y] = b.labelAt;
         const tint = CATEGORY_TINT[b.category] ?? "#334155";
-        const showName = scale > 0.8 || isEmphasised;
+        // Names only appear on hover/selection or when zoomed in a lot, so the
+        // default view reads as clean number badges instead of overlapping text.
+        const showName = scale > 1.6 || isEmphasised;
 
         return (
           <g
