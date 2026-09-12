@@ -90,8 +90,9 @@
     </div>
     <div id="hint">
       <b>Select</b>: click a shape to select, drag its white handles to reshape, drag the shape body to move it,
-      drag the red handle to rotate. <b>Rectangle/Polygon/Circle</b>: draw a new shape. Scroll to zoom, drag empty
-      space to pan. Click a shape in the list to focus it.
+      drag the red handle to rotate. <b>Rectangle/Circle</b>: click-drag to draw. <b>Polygon</b>: click to add each
+      corner, then click "✓ Finish shape". Scroll to zoom, drag empty space to pan. Click a shape in the list to
+      focus it.
     </div>
     <div id="coords">x: 0, y: 0</div>
   </div>
@@ -100,6 +101,7 @@
       <button id="modeSelect" class="active">Select</button>
       <button id="modeRect">+ Rectangle</button>
       <button id="modePoly">+ Polygon</button>
+      <button id="finishPoly" style="display:none">✓ Finish shape</button>
       <button id="modeCircle">+ Circle</button>
       <button id="zoomIn">Zoom +</button>
       <button id="zoomOut">Zoom -</button>
@@ -154,14 +156,17 @@ function fitToView() {
   applyCamera();
 }
 
+// The SVG overlay sits on top of the image (so shapes are clickable), which
+// means a click "on the image" almost always reports its target as the
+// overlay/background, never the <img> itself. Shape bodies/vertices/rotate
+// handles call stopPropagation() when they handle an event themselves, so by
+// the time a pointerdown reaches here it's safe to treat as "background".
 let isPanning = false, panStart = null;
 canvasWrap.addEventListener("pointerdown", (e) => {
-  if (e.target === canvasWrap || e.target === stage || e.target.id === "satImage") {
-    if (mode === "select") {
-      isPanning = true;
-      canvasWrap.classList.add("panning");
-      panStart = { x: e.clientX - camera.x, y: e.clientY - camera.y };
-    }
+  if (mode === "select") {
+    isPanning = true;
+    canvasWrap.classList.add("panning");
+    panStart = { x: e.clientX - camera.x, y: e.clientY - camera.y };
   }
 });
 window.addEventListener("pointermove", (e) => {
@@ -406,11 +411,18 @@ function setMode(newMode) {
   const map = { select: "modeSelect", rect: "modeRect", poly: "modePoly", circle: "modeCircle" };
   document.getElementById(map[newMode]).classList.add("active");
   canvasWrap.classList.toggle("drawing", newMode !== "select");
+  document.getElementById("finishPoly").style.display = newMode === "poly" ? "" : "none";
 }
 document.getElementById("modeSelect").onclick = () => setMode("select");
 document.getElementById("modeRect").onclick = () => setMode("rect");
 document.getElementById("modePoly").onclick = () => setMode("poly");
 document.getElementById("modeCircle").onclick = () => setMode("circle");
+document.getElementById("finishPoly").onclick = () => {
+  if (drawingPoints.length >= 3) {
+    addShape(drawingPoints.map((p) => [...p]), "New shape");
+  }
+  setMode("select");
+};
 
 let newShapeCounter = 1;
 function addShape(points, label) {
@@ -423,7 +435,7 @@ function addShape(points, label) {
 // Rectangle draw: drag from corner to corner (axis-aligned; rotate after with the handle).
 let rectStart = null;
 canvasWrap.addEventListener("pointerdown", (e) => {
-  if (mode === "rect" && e.target.id === "satImage") {
+  if (mode === "rect") {
     rectStart = clientToImage(e.clientX, e.clientY);
   }
 });
@@ -455,7 +467,7 @@ window.addEventListener("pointerup", (e) => {
 // Circle draw: click center, drag radius, release to finish.
 let circleCenter = null;
 canvasWrap.addEventListener("pointerdown", (e) => {
-  if (mode === "circle" && e.target.id === "satImage") {
+  if (mode === "circle") {
     circleCenter = clientToImage(e.clientX, e.clientY);
   }
 });
@@ -492,7 +504,7 @@ window.addEventListener("pointerup", (e) => {
 
 // Polygon draw: click to add points, double-click or Enter to finish, Escape to cancel.
 canvasWrap.addEventListener("click", (e) => {
-  if (mode === "poly" && e.target.id === "satImage") {
+  if (mode === "poly") {
     const [x, y] = clientToImage(e.clientX, e.clientY);
     drawingPoints.push([x, y]);
     if (drawTempEl) drawTempEl.remove();
