@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+/*
+ * Design tokens (light theme default; dark theme values applied via [data-theme="dark"]).
+ * See docs/PLAN.md §4.4 for the map palette this pairs with.
+ */
+:root {
+  --color-ground: #f7f7f5;
+  --color-surface: #ffffff;
+  --color-ink: #0b1220;
+  --color-ink-muted: #5b6472;
+  --color-border: #e5e2da;
+  --color-accent: #1d4ed8;
+  --color-accent-ink: #ffffff;
+  --color-start: #16a34a;
+  --color-destination: #0b1220;
+
+  /* map palette */
+  --map-ground: #f3f1ec;
+  --map-future: #f3e3d6;
+  --map-road: #d5d6db;
+  --map-road-marking: #ffffff;
+  --map-parking: #e4e5e9;
+  --map-lawn: #cfe5c3;
+  --map-field: #b7d9a0;
+  --map-field-line: #ffffff;
+  --map-plaza: #eae6dd;
+  --map-walkway: #ffffff;
+  --map-walkway-edge: #e2ddd2;
+  --map-canopy: #d8cdbd;
+  --map-building: #ffffff;
+  --map-building-outline: rgb(31 41 55 / 0.18);
+  --map-building-shadow: rgb(11 18 32 / 0.1);
+  --map-tree: #c98a4b;
+  --map-tree-canopy: #e08a3c;
+  --map-route: #1d4ed8;
+  --map-route-casing: #ffffff;
+
+  color-scheme: light;
+}
+
+[data-theme="dark"] {
+  --color-ground: #0e1420;
+  --color-surface: #161d2b;
+  --color-ink: #f2f4f8;
+  --color-ink-muted: #9aa4b2;
+  --color-border: #262f40;
+  --color-accent: #60a5fa;
+  --color-accent-ink: #0b1220;
+  --color-start: #4ade80;
+  --color-destination: #f2f4f8;
+
+  --map-ground: #0e1420;
+  --map-future: #241c17;
+  --map-road: #1c2432;
+  --map-road-marking: #3a4658;
+  --map-parking: #1a2130;
+  --map-lawn: #1e3324;
+  --map-field: #234527;
+  --map-field-line: #7c9a7c;
+  --map-plaza: #202838;
+  --map-walkway: #2a3346;
+  --map-walkway-edge: #3a4560;
+  --map-canopy: #3a3020;
+  --map-building: #1b2433;
+  --map-building-outline: rgb(226 232 240 / 0.16);
+  --map-building-shadow: rgb(0 0 0 / 0.35);
+  --map-tree: #7a5230;
+  --map-tree-canopy: #6b4a24;
+  --map-route: #60a5fa;
+  --map-route-casing: #0b1220;
+
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--color-ground);
+  color: var(--color-ink);
+  font-family:
+    "Inter",
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
