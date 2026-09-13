@@ -123,7 +123,6 @@ function useGesturesOnCamera(
   scale: ReturnType<typeof useMotionValue<number>>,
   rotationDeg: ReturnType<typeof useMotionValue<number>>,
 ) {
-  const dragStart = useRef({ cx: 0, cy: 0 });
   const pinchStartScale = useRef(1);
   const pinchStartDistance = useRef(1);
 
@@ -170,30 +169,24 @@ function useGesturesOnCamera(
 
   useGesture(
     {
-      onDragStart: () => {
-        dragStart.current = { cx: cx.get(), cy: cy.get() };
-      },
-      // `movement` (not `offset`) resets to [0,0] at the start of *this*
-      // gesture — it's the delta since `dragStart.current` was captured.
-      // `offset` instead accumulates across every drag the user has ever
-      // made on this camera, so combining it with a per-gesture dragStart
-      // anchor made the camera jump to an unrelated position on the second
-      // and later drags.
-      //
-      // A plain tap/click never gets an `onDragStart` from @use-gesture (it
-      // only decides retroactively, on pointer-up, that the gesture was
-      // "just a tap") — so `dragStart.current` would still hold whatever
-      // stale value it last had (or the ref's `{cx:0,cy:0}` initial value
-      // on the very first click of a session), and panning to that stale
-      // point is exactly what made selecting a place jump the camera to an
-      // unrelated spot. Taps should never move the camera at all, so bail
-      // out before touching it.
-      onDrag: ({ movement: [dx, dy], pinching, tap }) => {
+      // `delta` is this frame's own tiny movement only — never a cumulative
+      // distance from some earlier anchor — so there's no stale state that
+      // can go wrong across gesture transitions. That matters because a
+      // fixed "anchor at gesture start" + cumulative `movement` (the more
+      // obvious approach, used here previously) breaks specifically when a
+      // two-finger pinch collapses to one finger still touching: dragging
+      // is suppressed for the finger that was part of the pinch the whole
+      // time (via the `pinching` guard below), but @use-gesture keeps
+      // accumulating that finger's `movement` from its very first touch-
+      // down regardless — so the instant `pinching` flips false, the next
+      // onDrag delivers the *entire* pinch's worth of travel as one sudden
+      // jump. Per-frame `delta` has no such backlog to dump.
+      onDrag: ({ delta: [dx, dy], pinching, tap }) => {
         if (pinching || tap) return;
         const s = scale.get();
         const { x: mvx, y: mvy } = toMapVector(dx, dy);
-        cx.set(dragStart.current.cx - mvx / s);
-        cy.set(dragStart.current.cy - mvy / s);
+        cx.set(cx.get() - mvx / s);
+        cy.set(cy.get() - mvy / s);
       },
       onWheel: ({ delta: [, dy], event }) => {
         event.preventDefault();
