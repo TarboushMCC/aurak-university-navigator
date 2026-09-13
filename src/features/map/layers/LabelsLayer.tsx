@@ -39,13 +39,18 @@ function NumberBadge({
 }) {
   return (
     <g transform={`translate(${x} ${y}) rotate(${-rotationDeg}) scale(${s})`} pointerEvents="none">
-      <circle r={9} fill={isEmphasised ? tint : "white"} stroke={tint} strokeWidth={1.5} />
+      <circle
+        r={9}
+        fill={isEmphasised ? tint : "var(--color-surface)"}
+        stroke="var(--color-ink)"
+        strokeWidth={1.5}
+      />
       <text
         textAnchor="middle"
         dominantBaseline="central"
         fontSize={10}
         fontWeight={700}
-        fill={isEmphasised ? "white" : tint}
+        fill="var(--color-ink)"
         fontFamily="Inter, sans-serif"
       >
         {number}

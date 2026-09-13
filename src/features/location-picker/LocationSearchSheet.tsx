@@ -94,7 +94,10 @@ export function LocationSearchSheet({
           className="flex items-center gap-3 border-b px-4 py-3"
           style={{ borderColor: "var(--color-border)", paddingTop: "max(0.75rem, env(safe-area-inset-top))" }}
         >
-          <div className="flex flex-1 items-center gap-2 rounded-full border px-3 py-2" style={{ borderColor: "var(--color-border)" }}>
+          <div
+            className="flex flex-1 items-center gap-2 rounded-xl border px-3 py-2 transition-shadow duration-200 ease-out focus-within:border-(--color-accent) focus-within:shadow-[0_0_0_3px_rgba(139,13,24,0.12)]"
+            style={{ borderColor: "var(--color-border)", background: "var(--color-surface)" }}
+          >
             <Search size={16} className="shrink-0 text-(--color-ink-muted)" />
             <input
               ref={inputRef}
@@ -131,11 +134,11 @@ export function LocationSearchSheet({
                   key={cat}
                   type="button"
                   onClick={() => setActiveCategory((c) => (c === cat ? null : cat))}
-                  className="shrink-0 rounded-full border px-3 py-1 text-xs font-medium transition-colors"
+                  className="shrink-0 rounded-full border px-3 py-1 text-xs font-medium transition-colors duration-200 ease-out"
                   style={{
-                    borderColor: active ? CATEGORY_TINT[cat] : "var(--color-border)",
+                    borderColor: active ? "var(--color-accent)" : "var(--color-border)",
                     background: active ? CATEGORY_TINT[cat] : "transparent",
-                    color: active ? "white" : "var(--color-ink-muted)",
+                    color: active ? "var(--color-ink)" : "var(--color-ink-muted)",
                   }}
                 >
                   {CATEGORY_LABEL[cat]}
@@ -192,11 +195,11 @@ function ResultList({ entries, onSelect }: { entries: SearchEntry[]; onSelect: (
             <button
               type="button"
               onClick={() => onSelect(entry)}
-              className="flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-left transition-colors hover:bg-black/[0.03]"
+              className="flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-left transition-colors duration-200 ease-out hover:bg-(--color-ground)"
             >
               <span
-                className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-xs font-bold text-white"
-                style={{ background: CATEGORY_TINT[entry.category] ?? "#334155" }}
+                className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-xs font-bold text-(--color-ink)"
+                style={{ background: CATEGORY_TINT[entry.category] ?? "#d8c8e8" }}
               >
                 {entry.mapNumber ?? "·"}
               </span>

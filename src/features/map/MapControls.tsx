@@ -19,7 +19,7 @@ export function MapControls({
           type="button"
           onClick={onZoomIn}
           aria-label="Zoom in"
-          className="flex h-9 w-9 items-center justify-center text-(--color-ink) hover:bg-black/5"
+          className="flex h-9 w-9 items-center justify-center text-(--color-ink) hover:bg-(--color-ground) transition-colors duration-200 ease-out"
         >
           <Plus size={16} />
         </button>
@@ -28,7 +28,7 @@ export function MapControls({
           type="button"
           onClick={onZoomOut}
           aria-label="Zoom out"
-          className="flex h-9 w-9 items-center justify-center text-(--color-ink) hover:bg-black/5"
+          className="flex h-9 w-9 items-center justify-center text-(--color-ink) hover:bg-(--color-ground) transition-colors duration-200 ease-out"
         >
           <Minus size={16} />
         </button>
@@ -37,7 +37,7 @@ export function MapControls({
         type="button"
         onClick={onRecenter}
         aria-label="Recenter map"
-        className="flex h-9 w-9 items-center justify-center rounded-xl border shadow-sm text-(--color-ink) hover:bg-black/5"
+        className="flex h-9 w-9 items-center justify-center rounded-xl border shadow-sm text-(--color-ink) hover:bg-(--color-ground) transition-colors duration-200 ease-out"
         style={{ background: "var(--color-surface)", borderColor: "var(--color-border)" }}
       >
         <Compass size={16} />

@@ -49,7 +49,7 @@ export function BuildingInfoCard({
           type="button"
           onClick={onClose}
           aria-label="Close"
-          className="absolute top-3 right-3 rounded-full p-1 text-(--color-ink-muted) hover:bg-black/5"
+          className="absolute top-3 right-3 rounded-full p-1 text-(--color-ink-muted) transition-colors duration-200 ease-out hover:bg-(--color-ground)"
         >
           <X size={16} />
         </button>
@@ -57,8 +57,8 @@ export function BuildingInfoCard({
         <div className="flex items-start gap-3 pr-6">
           {building.mapNumber !== undefined && (
             <div
-              className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-sm font-bold text-white"
-              style={{ background: tint }}
+              className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-sm font-bold"
+              style={{ background: tint, color: "var(--color-ink)" }}
             >
               {building.mapNumber}
             </div>
@@ -89,10 +89,12 @@ export function BuildingInfoCard({
           <button
             type="button"
             onClick={onSetDestination}
-            className="flex flex-1 items-center justify-center gap-1.5 rounded-xl px-3 py-2 text-sm font-medium text-white transition-colors"
-            style={{
-              background: isDestination ? "var(--color-ink)" : "var(--color-accent)",
-            }}
+            className="flex flex-1 items-center justify-center gap-1.5 rounded-xl px-3 py-2 text-sm font-medium transition-colors duration-200 ease-out"
+            style={
+              isDestination
+                ? { background: "var(--color-gold)", color: "var(--color-gold-ink)" }
+                : { background: "var(--color-accent)", color: "var(--color-accent-ink)" }
+            }
           >
             <Navigation size={15} />
             {isDestination ? "Destination" : "Navigate here"}

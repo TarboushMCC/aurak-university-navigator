@@ -2,75 +2,93 @@
 
 /*
  * Design tokens (light theme default; dark theme values applied via [data-theme="dark"]).
- * See docs/PLAN.md §4.4 for the map palette this pairs with.
+ * Palette is AURAK SGA's official identity: burgundy + gold on cream/white,
+ * dark charcoal type. Burgundy = brand/active/primary action. Gold = official
+ * accent / highlight / destination. Cream + white carry the "clean campus
+ * product" feel; the map itself stays neutral so the brand reads from the
+ * surrounding UI, not from recoloring the campus.
  */
 :root {
-  --color-ground: #f7f7f5;
-  --color-surface: #ffffff;
-  --color-ink: #0b1220;
-  --color-ink-muted: #48505c;
-  --color-border: #d8d3c6;
-  --color-accent: #9e1b1b;
-  --color-accent-ink: #ffffff;
-  --color-gold: #b8860b;
-  --color-start: #15803d;
-  --color-destination: #0b1220;
+  --color-ground: #f6f1e6; /* cream */
+  --color-surface: #fffdfc; /* white */
+  --color-ink: #171717; /* dark charcoal */
+  --color-ink-muted: #6f6a61; /* muted */
+  --color-border: #ddd6c8;
+  --color-accent: #8b0d18; /* SGA burgundy */
+  --color-accent-hover: #650a12; /* dark burgundy */
+  --color-accent-ink: #fffdfc;
+  --color-red: #a3131b; /* SGA red — secondary accent, used sparingly */
+  --color-gold: #d9a62e; /* SGA gold */
+  --color-gold-light: #f0c75e;
+  --color-gold-ink: #171717;
+  --color-start: #8b0d18; /* "From" indicator — burgundy */
+  --color-destination: #d9a62e; /* "To" indicator — gold */
+  --color-error: #b42318;
+  --color-warning: #b7791f;
+  --color-success: #2f7d4a;
 
-  /* map palette */
-  --map-ground: #e3ddcd;
+  /* map palette — kept neutral/campus-toned; the route is the one strong brand accent on the map itself */
+  --map-ground: #e9e2d3;
   --map-future: #f3e3d6;
-  --map-road: #c3c5cd;
-  --map-road-marking: #ffffff;
+  --map-road: #c9c2b0;
+  --map-road-marking: #fffdfc;
   --map-parking: #d9cfb8;
   --map-lawn: #bcdca9;
   --map-field: #a3d086;
   --map-field-line: #ffffff;
-  --map-plaza: #ddd4bf;
-  --map-walkway: #ffffff;
-  --map-walkway-edge: #a99f87;
+  --map-plaza: #f6f1e6;
+  --map-walkway: #fffdfc;
+  --map-walkway-edge: #b5aa92;
   --map-canopy: #cabb9e;
-  --map-building: #ffffff;
-  --map-building-outline: rgb(20 27 38 / 0.5);
-  --map-building-shadow: rgb(11 18 32 / 0.22);
+  --map-building: #fffdfc;
+  --map-building-outline: rgb(23 23 23 / 0.5);
+  --map-building-shadow: rgb(23 23 23 / 0.22);
   --map-tree: #a86a34;
   --map-tree-canopy: #c96f24;
-  --map-route: #1d4ed8;
-  --map-route-casing: #ffffff;
+  --map-route: #8b0d18;
+  --map-route-casing: #fffdfc;
 
   color-scheme: light;
 }
 
 [data-theme="dark"] {
-  --color-ground: #0e1420;
-  --color-surface: #161d2b;
-  --color-ink: #f2f4f8;
-  --color-ink-muted: #9aa4b2;
-  --color-border: #262f40;
-  --color-accent: #f0645a;
-  --color-accent-ink: #1a0505;
-  --color-gold: #d4af37;
-  --color-start: #4ade80;
-  --color-destination: #f2f4f8;
+  --color-ground: #171717; /* dark charcoal */
+  --color-surface: #221a1a; /* warm dark, burgundy-tinted */
+  --color-ink: #f6f1e6; /* cream */
+  --color-ink-muted: #b8ae9c;
+  --color-border: #3a2f2c;
+  --color-accent: #c43b3b; /* brighter burgundy-red for legibility on dark */
+  --color-accent-hover: #d9a62e;
+  --color-accent-ink: #fffdfc;
+  --color-red: #c43b3b;
+  --color-gold: #f0c75e;
+  --color-gold-light: #f7db8f;
+  --color-gold-ink: #171717;
+  --color-start: #c43b3b;
+  --color-destination: #f0c75e;
+  --color-error: #e0564a;
+  --color-warning: #d99a3d;
+  --color-success: #4aa06a;
 
-  --map-ground: #0e1420;
+  --map-ground: #171717;
   --map-future: #241c17;
-  --map-road: #1c2432;
-  --map-road-marking: #3a4658;
-  --map-parking: #1a2130;
+  --map-road: #2c2521;
+  --map-road-marking: #4a3d34;
+  --map-parking: #241d18;
   --map-lawn: #1e3324;
   --map-field: #234527;
   --map-field-line: #7c9a7c;
-  --map-plaza: #202838;
-  --map-walkway: #2a3346;
-  --map-walkway-edge: #3a4560;
+  --map-plaza: #221a1a;
+  --map-walkway: #2c2320;
+  --map-walkway-edge: #4a3d34;
   --map-canopy: #3a3020;
-  --map-building: #1b2433;
-  --map-building-outline: rgb(226 232 240 / 0.3);
+  --map-building: #221a1a;
+  --map-building-outline: rgb(246 241 230 / 0.28);
   --map-building-shadow: rgb(0 0 0 / 0.45);
   --map-tree: #7a5230;
   --map-tree-canopy: #6b4a24;
-  --map-route: #60a5fa;
-  --map-route-casing: #0b1220;
+  --map-route: #c43b3b;
+  --map-route-casing: #171717;
 
   color-scheme: dark;
 }

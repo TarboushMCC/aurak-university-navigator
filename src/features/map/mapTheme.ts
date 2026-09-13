@@ -21,13 +21,18 @@ export const mapVar = {
   routeCasing: "var(--map-route-casing)",
 } as const;
 
+/**
+ * Muted/pastel map-category colors — functional, not the SGA brand colors.
+ * Kept deliberately subordinate to the burgundy/gold UI so the campus
+ * itself reads as neutral and the brand comes from the surrounding product.
+ */
 export const CATEGORY_TINT: Record<string, string> = {
-  academic: "#6d8fd9",
-  services: "#d99a4e",
-  residence: "#8f7bd9",
-  sports: "#4fae7a",
-  facilities: "#9aa4b2",
-  landmark: "#d96b6b",
+  academic: "#dce8f0",
+  services: "#e8dcc7",
+  residence: "#f0d9a6",
+  sports: "#b7d99a",
+  facilities: "#d8c8e8",
+  landmark: "#f3c8c8",
 };
 
 function hexToHsl(hex: string): [number, number, number] {

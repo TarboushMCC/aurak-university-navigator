@@ -11,8 +11,10 @@ export function LocationPicker({ label, value, tone, onClick }: LocationPickerPr
     <button
       type="button"
       onClick={onClick}
-      className="flex min-w-0 flex-1 items-center gap-2 rounded-full border px-3 py-1.5 text-left transition-colors hover:bg-black/[0.03]"
-      style={{ borderColor: "var(--color-border)" }}
+      className="flex min-w-0 flex-1 items-center gap-2 rounded-xl border px-3 py-1.5 text-left shadow-sm transition-colors duration-200 ease-out hover:border-(--color-gold) focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--color-accent)"
+      style={{ borderColor: "var(--color-border)", background: "var(--color-surface)" }}
+      onMouseEnter={(e) => (e.currentTarget.style.background = "var(--color-ground)")}
+      onMouseLeave={(e) => (e.currentTarget.style.background = "var(--color-surface)")}
     >
       <span
         className="h-2 w-2 shrink-0 rounded-full"
