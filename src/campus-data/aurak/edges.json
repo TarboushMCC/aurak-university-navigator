@@ -1645,5 +1645,14 @@
     "kind": "walkway",
     "lengthM": 23.710797012514398,
     "accessible": null
+  },
+  {
+    "id": "edge-1789297430478-1",
+    "from": "node-1789292928774-184",
+    "to": "node-1789292616956-122",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 12.582870482461596,
+    "accessible": null
   }
 ]

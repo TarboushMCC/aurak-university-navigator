@@ -465,6 +465,19 @@ for (const node of graphNodes) {
     place?.anchors.push(node.id);
     if (place?.buildingId) node.buildingId = place.buildingId;
   }
+
+  // A node the user explicitly labelled as shared between two residence
+  // halls (e.g. "Residential Hall 6 and 5 entrance") is a real single
+  // doorway serving both buildings, not a proximity tie to resolve toward
+  // one — nearest-place-wins would otherwise silently drop it from
+  // whichever hall it's slightly farther from.
+  if (node.name) {
+    for (const m of node.name.matchAll(/hall\s*(\d+)/gi)) {
+      const placeId = `place.res-${m[1]}`;
+      const place = places.find((p) => p.id === placeId);
+      if (place && !place.anchors.includes(node.id)) place.anchors.push(node.id);
+    }
+  }
 }
 
 // Any startable place nobody traced a dedicated entrance/door for (e.g. a

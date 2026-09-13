@@ -78,12 +78,14 @@
   },
   {
     "id": "node-1789292057012-16",
-    "kind": "junction",
+    "kind": "entrance",
     "levelId": "ground",
     "x": 238.85602610579335,
     "y": 337.9350571602957,
     "floor": 0,
-    "indoor": false
+    "indoor": false,
+    "name": "Residential Hall 6 and 5 entrance",
+    "buildingId": "bldg-res-5"
   },
   {
     "id": "node-1789292057012-17",
