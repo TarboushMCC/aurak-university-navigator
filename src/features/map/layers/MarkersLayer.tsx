@@ -32,6 +32,7 @@ function anchorOf(f: MapFeature): Point | null {
 export function MarkersLayer({
   features,
   scale,
+  rotationDeg = 0,
   hoveredId,
   selectedId,
   onHover,
@@ -39,6 +40,8 @@ export function MarkersLayer({
 }: {
   features: MapFeature[];
   scale: number;
+  /** Counter-rotate the pin so it stays upright under the mobile auto-rotate (CampusMap). */
+  rotationDeg?: number;
   hoveredId?: string | null;
   selectedId?: string | null;
   onHover?: (id: string | null) => void;
@@ -60,7 +63,7 @@ export function MarkersLayer({
         return (
           <g
             key={f.id}
-            transform={`translate(${x} ${y}) scale(${s})`}
+            transform={`translate(${x} ${y}) rotate(${-rotationDeg}) scale(${s})`}
             onPointerEnter={() => onHover?.(f.id)}
             onPointerLeave={() => onHover?.(null)}
             onClick={() => onSelect?.(f.id)}

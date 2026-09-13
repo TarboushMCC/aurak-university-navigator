@@ -3,7 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="/favicon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--
+      maximum-scale=1, user-scalable=no: the map has its own pinch-to-zoom
+      (useMapCamera), and without this the OS's native page pinch-zoom
+      fires at the same time, fighting the app's own gesture for the same
+      two fingers - that's what read as zoom being "a bit broken" on phone.
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>AURAK University Navigator</title>
     <meta
       name="description"

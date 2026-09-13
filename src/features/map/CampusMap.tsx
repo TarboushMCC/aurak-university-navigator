@@ -166,12 +166,20 @@ export function CampusMap({
             onHover={setHoveredId}
             onSelect={(id) => setSelectedId((current) => (current === id ? null : id))}
           />
-          {nodes && <DoorsLayer nodes={nodes} buildingsById={buildingsById} scale={snapshot.scale} />}
+          {nodes && (
+            <DoorsLayer
+              nodes={nodes}
+              buildingsById={buildingsById}
+              scale={snapshot.scale}
+              rotationDeg={snapshot.rotationDeg}
+            />
+          )}
           {route && <RouteLayer points={route.points} />}
           <TreesLayer features={mapData.features} scale={snapshot.scale} />
           <MarkersLayer
             features={mapData.features}
             scale={snapshot.scale}
+            rotationDeg={snapshot.rotationDeg}
             hoveredId={hoveredId}
             selectedId={selectedId}
             onHover={setHoveredId}

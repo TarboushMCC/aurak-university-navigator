@@ -105,6 +105,11 @@ body,
 
 body {
   margin: 0;
+  /* Backstop for the viewport meta's user-scalable=no: without this,
+     iOS Safari still allows a pull/bounce or double-tap zoom to sneak
+     in around the map's own pinch handler on some versions. */
+  touch-action: none;
+  overscroll-behavior: none;
   background: var(--color-ground);
   color: var(--color-ink);
   font-family:

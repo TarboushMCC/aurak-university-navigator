@@ -396,7 +396,18 @@ for (const shape of trace.shapes) {
   }
 
   if (/bus/i.test(name)) {
-    features.push({ id: nextId("plaza"), layer: "plaza", geometry: { type: "Polygon", coordinates: [toMapRing(shape.points)] }, label: "Bus Area", placeId: "place.bus-area" });
+    // A dedicated "poi" node the user traced for the bus stop itself is a
+    // much more precise icon anchor than the shape's polygon centroid (the
+    // paved area and the actual stop rarely share a center) — prefer it
+    // when present, and keep the polygon purely decorative (no label/
+    // placeId of its own) so it doesn't also compete for the marker.
+    const poiNode = (trace.nodes ?? []).find((n) => n.kind === "poi" && /bus/i.test(n.label ?? ""));
+    if (poiNode) {
+      features.push({ id: nextId("plaza"), layer: "plaza", geometry: { type: "Polygon", coordinates: [toMapRing(shape.points)] } });
+      features.push({ id: nextId("plaza"), layer: "plaza", geometry: { type: "Point", coordinates: toMap([poiNode.x, poiNode.y]) }, label: "Bus Area", placeId: "place.bus-area" });
+    } else {
+      features.push({ id: nextId("plaza"), layer: "plaza", geometry: { type: "Polygon", coordinates: [toMapRing(shape.points)] }, label: "Bus Area", placeId: "place.bus-area" });
+    }
     upsertPlace({ id: "place.bus-area", type: "service", name: "Bus Area", aliases: ["bus area", "bus stop", "shuttle", "bus"], anchors: [], startable: true });
     addAnchorGeom("place.bus-area", toMapRing(shape.points));
     continue;

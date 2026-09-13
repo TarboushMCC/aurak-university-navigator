@@ -17,10 +17,13 @@ export function DoorsLayer({
   nodes,
   buildingsById,
   scale,
+  rotationDeg = 0,
 }: {
   nodes: GraphNode[];
   buildingsById: Map<string, Building>;
   scale: number;
+  /** Counter-rotate the glyph so it stays upright under the mobile auto-rotate (CampusMap). */
+  rotationDeg?: number;
 }) {
   const doors = nodes.filter((n) => n.kind === "door" || n.kind === "entrance");
   const s = 1 / scale;
@@ -31,7 +34,11 @@ export function DoorsLayer({
         const building = node.buildingId ? buildingsById.get(node.buildingId) : undefined;
         const tint = building ? buildingTint(building.id, building.category) : "#334155";
         return (
-          <g key={node.id} transform={`translate(${node.x} ${node.y}) scale(${s})`} pointerEvents="none">
+          <g
+            key={node.id}
+            transform={`translate(${node.x} ${node.y}) rotate(${-rotationDeg}) scale(${s})`}
+            pointerEvents="none"
+          >
             <circle r={7.5} fill="white" stroke={tint} strokeWidth={2} />
             <DoorOpen x={-5} y={-5} width={10} height={10} stroke={tint} strokeWidth={2.5} fill="none" />
           </g>

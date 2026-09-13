@@ -1287,5 +1287,15 @@
     "y": 157.3394806868295,
     "floor": 0,
     "indoor": false
+  },
+  {
+    "id": "node-1789298927258-1",
+    "kind": "poi",
+    "levelId": "ground",
+    "x": 204.87158087901318,
+    "y": 191.31242400622014,
+    "floor": 0,
+    "indoor": false,
+    "name": "Bus Area"
   }
 ]

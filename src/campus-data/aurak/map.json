@@ -2263,12 +2263,23 @@
             ]
           ]
         ]
+      }
+    },
+    {
+      "id": "plaza-j",
+      "layer": "plaza",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          204.87158087901318,
+          191.31242400622014
+        ]
       },
       "label": "Bus Area",
       "placeId": "place.bus-area"
     },
     {
-      "id": "gate-j",
+      "id": "gate-k",
       "layer": "gate",
       "geometry": {
         "type": "Point",
@@ -2281,7 +2292,7 @@
       "placeId": "place.gate.node-1789291954415-1"
     },
     {
-      "id": "gate-k",
+      "id": "gate-l",
       "layer": "gate",
       "geometry": {
         "type": "Point",
@@ -2294,7 +2305,7 @@
       "placeId": "place.gate.node-1789292030835-14"
     },
     {
-      "id": "gate-l",
+      "id": "gate-m",
       "layer": "gate",
       "geometry": {
         "type": "Point",
@@ -2307,7 +2318,7 @@
       "placeId": "place.gate.node-1789292057012-17"
     },
     {
-      "id": "gate-m",
+      "id": "gate-n",
       "layer": "gate",
       "geometry": {
         "type": "Point",
@@ -2320,7 +2331,7 @@
       "placeId": "place.gate.node-1789292437171-106"
     },
     {
-      "id": "gate-n",
+      "id": "gate-o",
       "layer": "gate",
       "geometry": {
         "type": "Point",
