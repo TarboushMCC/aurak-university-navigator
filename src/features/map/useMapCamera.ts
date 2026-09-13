@@ -188,9 +188,17 @@ function useGesturesOnCamera(
         cx.set(cx.get() - mvx / s);
         cy.set(cy.get() - mvy / s);
       },
+      // A trackpad pinch is delivered to the browser as a wheel event with
+      // `ctrlKey: true` - that's the OS-level convention every browser
+      // uses to say "this wheel event actually means pinch-zoom, not
+      // scroll," not something this app opts into. Plain mouse-wheel
+      // zoom (no ctrlKey) already had the right sign; trackpad pinch
+      // came through inverted (spreading fingers to zoom in was zooming
+      // out instead), so only the ctrlKey case flips.
       onWheel: ({ delta: [, dy], event }) => {
         event.preventDefault();
-        const factor = Math.exp(-dy * 0.0015);
+        const direction = event.ctrlKey ? 1 : -1;
+        const factor = Math.exp(direction * dy * 0.0015);
         zoomAt(event.clientX, event.clientY, factor);
       },
       // `offset` (like drag's) accumulates across every pinch the user has
