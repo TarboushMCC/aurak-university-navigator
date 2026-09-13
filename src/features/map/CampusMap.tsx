@@ -83,6 +83,22 @@ export function CampusMap({
     rotationDeg: 0,
   });
 
+  // The campus is a landscape shape (≈587×378 m). A phone in portrait is the
+  // opposite aspect ratio, so fitting it unrotated leaves most of the screen
+  // empty above and below a thin strip of map. Rotating 90° swaps which of
+  // the campus's dimensions lines up with the screen's long axis, so pick
+  // whichever rotation lets the campus fill more of the container. Labels
+  // stay upright regardless (LabelsLayer counter-rotates them), same trick
+  // already used for Guide View's heading-up rotation.
+  const rotationForFit = useMemo(() => {
+    const { width: cw, height: ch } = containerSize;
+    const { width: bw, height: bh } = mapData.bounds;
+    if (cw === 0 || ch === 0) return 0;
+    const scaleAt0 = Math.min(cw / bw, ch / bh);
+    const scaleAt90 = Math.min(cw / bh, ch / bw);
+    return scaleAt90 > scaleAt0 ? 90 : 0;
+  }, [containerSize, mapData.bounds]);
+
   const buildingsById = useMemo(() => new Map(buildings.map((b) => [b.id, b])), [buildings]);
   const landmarkPlaces = useMemo(() => deriveLandmarkPlaces(mapData.features), [mapData.features]);
   const placesById = useMemo(() => {
@@ -100,6 +116,7 @@ export function CampusMap({
     camera.fitBounds([0, 0, mapData.bounds.width, mapData.bounds.height], {
       padding: 0.06,
       durationMs: 0,
+      rotationDeg: rotationForFit,
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [containerSize.width, containerSize.height]);
@@ -175,7 +192,10 @@ export function CampusMap({
         onZoomIn={() => camera.flyTo({ scale: snapshot.scale * 1.4 }, 200)}
         onZoomOut={() => camera.flyTo({ scale: snapshot.scale / 1.4 }, 200)}
         onRecenter={() =>
-          camera.fitBounds([0, 0, mapData.bounds.width, mapData.bounds.height], { padding: 0.06 })
+          camera.fitBounds([0, 0, mapData.bounds.width, mapData.bounds.height], {
+            padding: 0.06,
+            rotationDeg: rotationForFit,
+          })
         }
       />
 

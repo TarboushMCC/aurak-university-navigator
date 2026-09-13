@@ -126,7 +126,17 @@ export function LocationSearchSheet({
         </div>
 
         {!showingSearch && (
-          <div className="flex gap-1.5 overflow-x-auto border-b px-4 py-2.5" style={{ borderColor: "var(--color-border)" }}>
+          <div
+            className="flex gap-1.5 overflow-x-auto border-b px-4 py-2.5"
+            style={{
+              borderColor: "var(--color-border)",
+              // The chip row scrolls, but a hard-cropped chip at the edge
+              // reads as a cut-off/broken button rather than "scroll for
+              // more" — fade the last ~10% out instead of clipping it.
+              maskImage: "linear-gradient(to right, black 90%, transparent 100%)",
+              WebkitMaskImage: "linear-gradient(to right, black 90%, transparent 100%)",
+            }}
+          >
             {CATEGORY_ORDER.map((cat) => {
               const active = activeCategory === cat;
               return (

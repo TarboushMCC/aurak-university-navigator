@@ -84,8 +84,12 @@ export function useMapCamera(
       if (width === 0 || height === 0) return;
       const padding = opts.padding ?? 0.1;
       const [minX, minY, maxX, maxY] = bbox;
-      const boxW = Math.max(1, maxX - minX);
-      const boxH = Math.max(1, maxY - minY);
+      // A 90°/270° rotation swaps which of the box's dimensions lines up
+      // with the container's width vs height on screen, so the scale that
+      // fits must be computed against the swapped box, not the raw one.
+      const rotated = Math.abs(((opts.rotationDeg ?? 0) / 90) % 2) === 1;
+      const boxW = Math.max(1, rotated ? maxY - minY : maxX - minX);
+      const boxH = Math.max(1, rotated ? maxX - minX : maxY - minY);
       const availW = width * (1 - padding * 2);
       const availH = height * (1 - padding * 2);
       let nextScale = Math.min(availW / boxW, availH / boxH);
