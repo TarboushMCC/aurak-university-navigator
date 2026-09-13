@@ -5,10 +5,13 @@ import { buildingTint } from "@/features/map/mapTheme";
 import type { Building, GraphNode } from "@/domain/schema";
 
 /**
- * Marks every entrance node as a small door glyph, tinted to match its
+ * Marks every entrance/door node as a small door glyph, tinted to match its
  * building. Rendered after `BuildingsLayer` (see `CampusMap.tsx`'s layer
  * order) so a door sitting exactly on a building's outline is drawn on top
- * of the building fill instead of being swallowed by it.
+ * of the building fill instead of being swallowed by it. "door" and
+ * "entrance" are both real building openings in the traced data (the
+ * distinction is just how the user's editor session labeled a given node),
+ * so both kinds get the same glyph.
  */
 export function DoorsLayer({
   nodes,
@@ -19,7 +22,7 @@ export function DoorsLayer({
   buildingsById: Map<string, Building>;
   scale: number;
 }) {
-  const doors = nodes.filter((n) => n.kind === "door");
+  const doors = nodes.filter((n) => n.kind === "door" || n.kind === "entrance");
   const s = 1 / scale;
 
   return (
