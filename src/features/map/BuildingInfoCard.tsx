@@ -1,9 +1,9 @@
 import { AnimatePresence, motion } from "motion/react";
 import { MapPinCheck, Navigation, X } from "lucide-react";
 
-import { CATEGORY_TINT } from "@/features/map/mapTheme";
+import { buildingTint } from "@/features/map/mapTheme";
 
-import type { Building } from "@/domain/schema";
+import type { SelectablePlace } from "@/features/map/selectablePlaces";
 
 const CATEGORY_LABEL: Record<string, string> = {
   academic: "Academic",
@@ -22,14 +22,14 @@ export function BuildingInfoCard({
   onSetStart,
   onSetDestination,
 }: {
-  building: Building;
+  building: SelectablePlace;
   isStart: boolean;
   isDestination: boolean;
   onClose: () => void;
   onSetStart: () => void;
   onSetDestination: () => void;
 }) {
-  const tint = CATEGORY_TINT[building.category] ?? "#334155";
+  const tint = buildingTint(building.id, building.category);
 
   return (
     <AnimatePresence>

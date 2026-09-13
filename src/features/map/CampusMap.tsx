@@ -3,6 +3,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { BuildingInfoCard } from "@/features/map/BuildingInfoCard";
 import { BuildingsLayer } from "@/features/map/layers/BuildingsLayer";
 import { CanopiesLayer } from "@/features/map/layers/CanopiesLayer";
+import { DoorsLayer } from "@/features/map/layers/DoorsLayer";
 import { GreenLayer } from "@/features/map/layers/GreenLayer";
 import { GroundLayer } from "@/features/map/layers/GroundLayer";
 import { HardscapeLayer } from "@/features/map/layers/HardscapeLayer";
@@ -11,19 +12,29 @@ import { MarkersLayer } from "@/features/map/layers/MarkersLayer";
 import { ParkingLayer } from "@/features/map/layers/ParkingLayer";
 import { RoadsLayer } from "@/features/map/layers/RoadsLayer";
 import { ShadowsLayer } from "@/features/map/layers/ShadowsLayer";
+import { RouteLayer } from "@/features/map/layers/RouteLayer";
 import { TreesLayer } from "@/features/map/layers/TreesLayer";
+import { WalkwayLayer } from "@/features/map/layers/WalkwayLayer";
 import { MapControls } from "@/features/map/MapControls";
+import { deriveLandmarkPlaces } from "@/features/map/selectablePlaces";
+import type { SelectablePlace } from "@/features/map/selectablePlaces";
 import { useMapCamera } from "@/features/map/useMapCamera";
 
-import type { Building, CampusMapData } from "@/domain/schema";
+import type { Building, CampusMapData, GraphEdge, GraphNode } from "@/domain/schema";
+import type { PlannedRoute } from "@/domain/routing/planRoute";
 
 export interface CampusMapProps {
   mapData: CampusMapData;
   buildings: Building[];
-  /** Called when the user picks "I'm here" on a building's info card. */
-  onSetStart?: (buildingId: string) => void;
-  /** Called when the user picks "Navigate here" on a building's info card. */
-  onSetDestination?: (buildingId: string) => void;
+  /** Walkway graph — shown as a faint review overlay so it stays visible even without an active route. */
+  nodes?: GraphNode[];
+  edges?: GraphEdge[];
+  /** The currently planned route (both a start and destination are set), drawn on top of the walkway overlay. */
+  route?: PlannedRoute | null;
+  /** Called when the user picks "I'm here" on a place's info card. */
+  onSetStart?: (placeId: string) => void;
+  /** Called when the user picks "Navigate here" on a place's info card. */
+  onSetDestination?: (placeId: string) => void;
   startBuildingId?: string | null;
   destinationBuildingId?: string | null;
 }
@@ -53,6 +64,9 @@ function useElementSize<T extends HTMLElement>() {
 export function CampusMap({
   mapData,
   buildings,
+  nodes,
+  edges,
+  route,
   onSetStart,
   onSetDestination,
   startBuildingId,
@@ -70,6 +84,12 @@ export function CampusMap({
   });
 
   const buildingsById = useMemo(() => new Map(buildings.map((b) => [b.id, b])), [buildings]);
+  const landmarkPlaces = useMemo(() => deriveLandmarkPlaces(mapData.features), [mapData.features]);
+  const placesById = useMemo(() => {
+    const map = new Map<string, SelectablePlace>(buildingsById);
+    for (const place of landmarkPlaces) map.set(place.id, place);
+    return map;
+  }, [buildingsById, landmarkPlaces]);
 
   // Fit the whole campus once we know the container's size.
   const didInitialFit = useRef(false);
@@ -84,7 +104,7 @@ export function CampusMap({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [containerSize.width, containerSize.height]);
 
-  const selectedBuilding = selectedId ? buildingsById.get(selectedId) : undefined;
+  const selectedPlace = selectedId ? placesById.get(selectedId) : undefined;
   const { snapshot } = camera;
   const tx = containerSize.width / 2 - snapshot.cx * snapshot.scale;
   const ty = containerSize.height / 2 - snapshot.cy * snapshot.scale;
@@ -101,23 +121,48 @@ export function CampusMap({
         >
           <GroundLayer bounds={mapData.bounds} features={mapData.features} />
           <RoadsLayer features={mapData.features} />
-          <ParkingLayer features={mapData.features} />
-          <GreenLayer features={mapData.features} />
+          <ParkingLayer
+            features={mapData.features}
+            hoveredId={hoveredId}
+            selectedId={selectedId}
+            onHover={setHoveredId}
+            onSelect={(id) => setSelectedId((current) => (current === id ? null : id))}
+          />
+          <GreenLayer
+            features={mapData.features}
+            hoveredId={hoveredId}
+            selectedId={selectedId}
+            onHover={setHoveredId}
+            onSelect={(id) => setSelectedId((current) => (current === id ? null : id))}
+          />
           <HardscapeLayer features={mapData.features} />
           <CanopiesLayer features={mapData.features} />
+          {nodes && edges && <WalkwayLayer nodes={nodes} edges={edges} dimmed={Boolean(route)} />}
           <ShadowsLayer features={mapData.features} />
           <BuildingsLayer
             features={mapData.features}
             buildingsById={buildingsById}
             hoveredId={hoveredId}
             selectedId={selectedId}
+            hasRoute={Boolean(route)}
+            routeBuildingIds={route ? new Set(route.buildingIds) : undefined}
             onHover={setHoveredId}
             onSelect={(id) => setSelectedId((current) => (current === id ? null : id))}
           />
+          {nodes && <DoorsLayer nodes={nodes} buildingsById={buildingsById} scale={snapshot.scale} />}
+          {route && <RouteLayer points={route.points} />}
           <TreesLayer features={mapData.features} scale={snapshot.scale} />
-          <MarkersLayer features={mapData.features} scale={snapshot.scale} />
+          <MarkersLayer
+            features={mapData.features}
+            scale={snapshot.scale}
+            hoveredId={hoveredId}
+            selectedId={selectedId}
+            onHover={setHoveredId}
+            onSelect={(id) => setSelectedId((current) => (current === id ? null : id))}
+          />
           <LabelsLayer
             buildings={buildings}
+            features={mapData.features}
             scale={snapshot.scale}
             rotationDeg={snapshot.rotationDeg}
             hoveredId={hoveredId}
@@ -134,14 +179,14 @@ export function CampusMap({
         }
       />
 
-      {selectedBuilding && (
+      {selectedPlace && (
         <BuildingInfoCard
-          building={selectedBuilding}
-          isStart={startBuildingId === selectedBuilding.id}
-          isDestination={destinationBuildingId === selectedBuilding.id}
+          building={selectedPlace}
+          isStart={startBuildingId === selectedPlace.id}
+          isDestination={destinationBuildingId === selectedPlace.id}
           onClose={() => setSelectedId(null)}
-          onSetStart={() => onSetStart?.(selectedBuilding.id)}
-          onSetDestination={() => onSetDestination?.(selectedBuilding.id)}
+          onSetStart={() => onSetStart?.(selectedPlace.id)}
+          onSetDestination={() => onSetDestination?.(selectedPlace.id)}
         />
       )}
     </div>

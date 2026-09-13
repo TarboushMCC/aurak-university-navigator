@@ -1,1 +1,1285 @@
-[]
+[
+  {
+    "id": "node-1789291954415-1",
+    "kind": "gate",
+    "levelId": "ground",
+    "x": 307.7488561971492,
+    "y": 326.7570814169962,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789291954415-2",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 307.7488561971492,
+    "y": 337.70693520635075,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789291954415-3",
+    "kind": "entrance",
+    "levelId": "ground",
+    "x": 379.83539364373354,
+    "y": 337.70693520635075,
+    "floor": 0,
+    "indoor": false,
+    "name": "Residential Hall 4 and 3 entrance",
+    "buildingId": "bldg-res-3"
+  },
+  {
+    "id": "node-1789291992629-6",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 465.15300441912126,
+    "y": 337.9350571602957,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789291992629-7",
+    "kind": "entrance",
+    "levelId": "ground",
+    "x": 514.4273464712168,
+    "y": 337.0225693445161,
+    "floor": 0,
+    "indoor": false,
+    "name": "Residential Hall 2 and 1 entrance",
+    "buildingId": "bldg-res-1"
+  },
+  {
+    "id": "node-1789292016840-10",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 465.3811263730661,
+    "y": 310.5604226869092,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789292016840-11",
+    "kind": "entrance",
+    "levelId": "ground",
+    "x": 459.2218336165542,
+    "y": 310.78854464085407,
+    "floor": 0,
+    "indoor": false,
+    "buildingId": "bldg-mosque"
+  },
+  {
+    "id": "node-1789292030835-14",
+    "kind": "gate",
+    "levelId": "ground",
+    "x": 473.8216386690269,
+    "y": 289.1169590160898,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789292057012-16",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 238.85602610579335,
+    "y": 337.9350571602957,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789292057012-17",
+    "kind": "gate",
+    "levelId": "ground",
+    "x": 165.62887888948464,
+    "y": 338.8475449760752,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789292057012-18",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 166.08512279737442,
+    "y": 319.68530084470467,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789292057012-19",
+    "kind": "entrance",
+    "levelId": "ground",
+    "x": 188.44107428397334,
+    "y": 319.68530084470467,
+    "floor": 0,
+    "indoor": false,
+    "buildingId": "bldg-i"
+  },
+  {
+    "id": "node-1789292078912-24",
+    "kind": "entrance",
+    "levelId": "ground",
+    "x": 152.3978055606812,
+    "y": 323.10713015387796,
+    "floor": 0,
+    "indoor": false,
+    "buildingId": "bldg-facilities-mgmt"
+  },
+  {
+    "id": "node-1789292106311-26",
+    "kind": "door",
+    "levelId": "ground",
+    "x": 308.1059655027467,
+    "y": 295.0916258799556,
+    "floor": 0,
+    "indoor": false,
+    "buildingId": "bldg-d"
+  },
+  {
+    "id": "node-1789292106311-27",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 309.2862887133517,
+    "y": 288.00365557826615,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789292106311-28",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 309.4944236524537,
+    "y": 277.48038888473906,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789292132344-32",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 309.09351101776036,
+    "y": 230.00084571515697,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789292148906-35",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 247.27248904013052,
+    "y": 277.4405423384742,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789292148906-36",
+    "kind": "entrance",
+    "levelId": "ground",
+    "x": 247.4592594992774,
+    "y": 255.21485769999092,
+    "floor": 0,
+    "indoor": false,
+    "buildingId": "bldg-a"
+  },
+  {
+    "id": "node-1789292203373-41",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 391.08574258325734,
+    "y": 278.0008537159149,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789292203373-42",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 409.3892475796553,
+    "y": 276.6934605018865,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789292203373-43",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 409.76278849794915,
+    "y": 231.51775133339947,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789292203373-44",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 423.5838024748211,
+    "y": 240.64676188653127,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789292218283-49",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 436.4709641559584,
+    "y": 244.5689415286166,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789292218283-50",
+    "kind": "entrance",
+    "levelId": "ground",
+    "x": 448.98458491880194,
+    "y": 246.24987566093884,
+    "floor": 0,
+    "indoor": false,
+    "buildingId": "bldg-j"
+  },
+  {
+    "id": "node-1789292233906-53",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 465.0468444054369,
+    "y": 275.75960820615194,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789292240747-56",
+    "kind": "door",
+    "levelId": "ground",
+    "x": 488.3931517988016,
+    "y": 259.6973487195169,
+    "floor": 0,
+    "indoor": false,
+    "buildingId": "bldg-h"
+  },
+  {
+    "id": "node-1789292254224-58",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 546.6655350526402,
+    "y": 260.25766009695764,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789292254224-59",
+    "kind": "door",
+    "levelId": "ground",
+    "x": 546.8523055117869,
+    "y": 245.87633474264496,
+    "floor": 0,
+    "indoor": false,
+    "buildingId": "bldg-h"
+  },
+  {
+    "id": "node-1789292286041-62",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 200.07081913189415,
+    "y": 318.9826951896095,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789292286041-63",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 200.07081913189418,
+    "y": 287.9581094531049,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789292286041-64",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 247.2920635984858,
+    "y": 287.72998749916,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789292322057-70",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 209.88006315152433,
+    "y": 277.0082556637503,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789292322057-71",
+    "kind": "door",
+    "levelId": "ground",
+    "x": 209.88006315152433,
+    "y": 255.5647919929309,
+    "floor": 0,
+    "indoor": false,
+    "buildingId": "bldg-a"
+  },
+  {
+    "id": "node-1789292355216-75",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 209.86092358880748,
+    "y": 239.64881458150924,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789292355216-76",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 247.58855633648488,
+    "y": 239.6488145815093,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789292378182-80",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 475.82036743480165,
+    "y": 257.37821178412884,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789292378182-81",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 476.0484893887466,
+    "y": 244.37526040927028,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789292390557-85",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 476.86091528510406,
+    "y": 228.56686504975366,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789292390557-86",
+    "kind": "entrance",
+    "levelId": "ground",
+    "x": 492.2396331869137,
+    "y": 227.55288364963437,
+    "floor": 0,
+    "indoor": false,
+    "buildingId": "bldg-h"
+  },
+  {
+    "id": "node-1789292405783-89",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 506.942363488644,
+    "y": 228.3978681497338,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789292405783-90",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 506.77336658862424,
+    "y": 224.6799363492963,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789292405783-91",
+    "kind": "door",
+    "levelId": "ground",
+    "x": 514.8852177895789,
+    "y": 224.6799363492963,
+    "floor": 0,
+    "indoor": false,
+    "buildingId": "bldg-h"
+  },
+  {
+    "id": "node-1789292422823-95",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 521.3070999903346,
+    "y": 225.86291464943545,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789292422823-96",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 521.4760968903544,
+    "y": 229.7498433498929,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789292422823-97",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 539.3897682924626,
+    "y": 230.08783714993268,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789292422823-98",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 546.4876380932978,
+    "y": 232.96078445027075,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789292437171-104",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 559.838393194869,
+    "y": 216.90607894838143,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789292437171-105",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 560.0073900948888,
+    "y": 194.76748504577606,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789292437171-106",
+    "kind": "gate",
+    "levelId": "ground",
+    "x": 572.3441637963407,
+    "y": 188.1766059450005,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789292583145-110",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 560.5143807949486,
+    "y": 176.5158198436282,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789292583145-111",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 557.3034396945707,
+    "y": 154.54622284104278,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789292583145-112",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 545.6426535931984,
+    "y": 149.30731894042623,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789292583145-113",
+    "kind": "door",
+    "levelId": "ground",
+    "x": 545.6426535931985,
+    "y": 133.4216103385568,
+    "floor": 0,
+    "indoor": false,
+    "buildingId": "bldg-k"
+  },
+  {
+    "id": "node-1789292599765-118",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 496.29555878739114,
+    "y": 149.645312740466,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789292599765-119",
+    "kind": "entrance",
+    "levelId": "ground",
+    "x": 496.6690997056851,
+    "y": 142.56521649875776,
+    "floor": 0,
+    "indoor": false,
+    "buildingId": "bldg-k"
+  },
+  {
+    "id": "node-1789292616956-122",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 473.45389926915567,
+    "y": 142.11697428308463,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789292616956-123",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 469.8971721136418,
+    "y": 137.8876996293548,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789292616956-124",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 440.95583937759193,
+    "y": 138.19479464099933,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789292636375-128",
+    "kind": "door",
+    "levelId": "ground",
+    "x": 440.68636592884906,
+    "y": 120.45297848715424,
+    "floor": 0,
+    "indoor": false,
+    "buildingId": "bldg-k"
+  },
+  {
+    "id": "node-1789292670583-130",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 389.9884826599155,
+    "y": 230.3698386858549,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789292696579-134",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 289.61482292416525,
+    "y": 231.5104484555793,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789292696579-135",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 285.0523838452675,
+    "y": 239.95096075154015,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789292710455-139",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 309.00518900948066,
+    "y": 216.22627754127186,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789292710455-140",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 309.23331096342554,
+    "y": 175.1643258311922,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789292710455-142",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 309.4614329173704,
+    "y": 128.85556918038017,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789292717647-147",
+    "kind": "door",
+    "levelId": "ground",
+    "x": 333.6423600355284,
+    "y": 161.93325250238877,
+    "floor": 0,
+    "indoor": false,
+    "buildingId": "bldg-g"
+  },
+  {
+    "id": "node-1789292737268-149",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 333.41423808158356,
+    "y": 205.73266765980705,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789292746321-151",
+    "kind": "entrance",
+    "levelId": "ground",
+    "x": 361.7013603707495,
+    "y": 189.5360089297201,
+    "floor": 0,
+    "indoor": false,
+    "buildingId": "bldg-g"
+  },
+  {
+    "id": "node-1789292756687-153",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 361.24511646285976,
+    "y": 215.3137897254923,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789292790948-159",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 389.53223875202576,
+    "y": 206.87327742953153,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789292831899-165",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 399.7977266795457,
+    "y": 215.08566777154743,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789292855263-169",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 333.1861161276386,
+    "y": 189.5360089297201,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789292872581-173",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 388.6197509362462,
+    "y": 189.764130883665,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789292883787-176",
+    "kind": "door",
+    "levelId": "ground",
+    "x": 387.82318906338725,
+    "y": 169.07619983484497,
+    "floor": 0,
+    "indoor": false,
+    "buildingId": "bldg-g"
+  },
+  {
+    "id": "node-1789292915355-179",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 411.32787886118393,
+    "y": 211.24894604928235,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789292928774-181",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 453.8626297644839,
+    "y": 165.35508181156206,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789292928774-182",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 465.04060550778337,
+    "y": 168.09254525890074,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789292928774-183",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 475.99045929713793,
+    "y": 161.47700859449898,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789292928774-184",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 482.1497520536499,
+    "y": 151.21152066697908,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789292936371-190",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 450.8970443632004,
+    "y": 153.94898411431774,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789292936371-191",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 452.26950601876604,
+    "y": 144.49124785534573,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789292947682-195",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 387.7072631204667,
+    "y": 131.5930326277188,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789292947682-196",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 353.4889700287336,
+    "y": 132.27739848955343,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789292947682-197",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 333.1861161276386,
+    "y": 132.27739848955346,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789292970498-203",
+    "kind": "entrance",
+    "levelId": "ground",
+    "x": 346.41718945644215,
+    "y": 125.20561791726196,
+    "floor": 0,
+    "indoor": false,
+    "buildingId": "bldg-l"
+  },
+  {
+    "id": "node-1789292985423-206",
+    "kind": "door",
+    "levelId": "ground",
+    "x": 346.18906750249727,
+    "y": 105.74327644595778,
+    "floor": 0,
+    "indoor": false,
+    "buildingId": "bldg-l"
+  },
+  {
+    "id": "node-1789293003477-208",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 399.7977266795457,
+    "y": 129.76805699615971,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789293003477-209",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 401.166458403215,
+    "y": 117.22134952919092,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789293003477-210",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 415.76626345568775,
+    "y": 117.4494714831358,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789293012087-215",
+    "kind": "poi",
+    "levelId": "ground",
+    "x": 418.9599708109162,
+    "y": 109.46520309506477,
+    "floor": 0,
+    "indoor": false,
+    "buildingId": "bldg-zeh"
+  },
+  {
+    "id": "node-1789293040775-217",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 555.2518938150286,
+    "y": 180.430916888426,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789293040775-218",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 505.52130785504323,
+    "y": 179.74655102659133,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789293060179-225",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 497.94062769613515,
+    "y": 166.980577089072,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789293060179-226",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 485.09686329462363,
+    "y": 166.13559258897254,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789293076170-231",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 506.2753888277432,
+    "y": 195.48536310204236,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789293086310-235",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 483.4893928118192,
+    "y": 202.58264054962524,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789293108031-240",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 478.8201313331462,
+    "y": 214.34917947588107,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789293108031-241",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 415.31817522319415,
+    "y": 214.53594993502801,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789293115944-245",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 482.3687700569377,
+    "y": 211.92116350697114,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789293146260-248",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 308.3841250806718,
+    "y": 159.36894742565372,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789293146260-249",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 309.8782887538472,
+    "y": 146.85532666281023,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789293165086-255",
+    "kind": "door",
+    "levelId": "ground",
+    "x": 232.94021463904014,
+    "y": 122.46189261087807,
+    "floor": 0,
+    "indoor": false,
+    "buildingId": "bldg-c"
+  },
+  {
+    "id": "node-1789293185621-259",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 287.75474612818016,
+    "y": 159.8226962555486,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789293185621-260",
+    "kind": "poi",
+    "levelId": "ground",
+    "x": 267.31983142750397,
+    "y": 167.45998760832651,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789293208932-264",
+    "kind": "door",
+    "levelId": "ground",
+    "x": 220.65896702675897,
+    "y": 122.59821763309954,
+    "floor": 0,
+    "indoor": false,
+    "buildingId": "bldg-c"
+  },
+  {
+    "id": "node-1789293230279-266",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 304.3607317858868,
+    "y": 125.11935512584435,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789293230279-267",
+    "kind": "parking",
+    "levelId": "ground",
+    "x": 300.32691179749514,
+    "y": 119.06862514325681,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789293242144-270",
+    "kind": "parking",
+    "levelId": "ground",
+    "x": 244.35765945856025,
+    "y": 119.06862514325681,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789293253784-273",
+    "kind": "gate",
+    "levelId": "ground",
+    "x": 244.35765945856025,
+    "y": 42.930272862363424,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789293268837-275",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 305.6213005322592,
+    "y": 115.53903265341405,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789293268837-276",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 305.6213005322592,
+    "y": 105.95871018098377,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789293273667-280",
+    "kind": "parking",
+    "levelId": "ground",
+    "x": 346.2116141654507,
+    "y": 91.84034022161282,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789293285375-282",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 395.6259090232491,
+    "y": 106.21082393025826,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789293300286-286",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 220.0773342991534,
+    "y": 215.1160008285215,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789293321887-290",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 220.08896154391093,
+    "y": 145.31234468023928,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789293321887-291",
+    "kind": "door",
+    "levelId": "ground",
+    "x": 221.39965672668015,
+    "y": 200.68725714158816,
+    "floor": 0,
+    "indoor": false,
+    "buildingId": "bldg-c"
+  },
+  {
+    "id": "node-1789293329897-295",
+    "kind": "entrance",
+    "levelId": "ground",
+    "x": 193.10313823919597,
+    "y": 145.09308091278874,
+    "floor": 0,
+    "indoor": false,
+    "buildingId": "bldg-outdoor-comfort"
+  },
+  {
+    "id": "node-1789293356178-298",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 213.40187073402677,
+    "y": 209.11833615788373,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789293356178-299",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 186.9321362782354,
+    "y": 208.83970737413856,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789293356178-300",
+    "kind": "landmark",
+    "levelId": "ground",
+    "x": 151.26765195885335,
+    "y": 206.05341953668685,
+    "floor": 0,
+    "indoor": false,
+    "buildingId": "bldg-temp"
+  },
+  {
+    "id": "node-1789293356178-301",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 115.04591007198096,
+    "y": 205.21753318545132,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789293356178-302",
+    "kind": "landmark",
+    "levelId": "ground",
+    "x": 88.01891804869923,
+    "y": 203.82438926672546,
+    "floor": 0,
+    "indoor": false,
+    "buildingId": "bldg-warehouse"
+  },
+  {
+    "id": "node-1789293368816-308",
+    "kind": "entrance",
+    "levelId": "ground",
+    "x": 88.57617561618959,
+    "y": 184.87763197205376,
+    "floor": 0,
+    "indoor": false,
+    "buildingId": "bldg-sports-complex"
+  },
+  {
+    "id": "node-1789293380299-310",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 117.27494034194233,
+    "y": 160.07967021873338,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789293380299-311",
+    "kind": "entrance",
+    "levelId": "ground",
+    "x": 103.34350115468372,
+    "y": 157.29338238128167,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789293391460-314",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 118.6680842606682,
+    "y": 121.62889806189963,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789293411140-316",
+    "kind": "poi",
+    "levelId": "ground",
+    "x": 118.33084818694549,
+    "y": 113.24024259185217,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789293431699-319",
+    "kind": "poi",
+    "levelId": "ground",
+    "x": 194.7427701266071,
+    "y": 108.40771432001264,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789293528903-324",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 165.50676233094163,
+    "y": 255.47972070657593,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789293528903-325",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 166.43055961714347,
+    "y": 280.11431500529216,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789293571512-331",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 291.82191542598224,
+    "y": 215.73037513653097,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789293577115-334",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 285.6961920565372,
+    "y": 214.0287853116851,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789293583183-337",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 233.96786138122383,
+    "y": 214.02878531168514,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789294506343-345",
+    "kind": "entrance",
+    "levelId": "ground",
+    "x": 232.81620085119508,
+    "y": 145.65473199225616,
+    "floor": 0,
+    "indoor": false,
+    "buildingId": "bldg-c"
+  },
+  {
+    "id": "node-1789294506343-346",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 233.83018225131443,
+    "y": 167.45533209482167,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789294512868-350",
+    "kind": "junction",
+    "levelId": "ground",
+    "x": 252.75783505354187,
+    "y": 133.31795829080434,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789294727941-355",
+    "kind": "door",
+    "levelId": "ground",
+    "x": 78.37506817004676,
+    "y": 157.3394806868295,
+    "floor": 0,
+    "indoor": false
+  },
+  {
+    "id": "node-1789294727941-356",
+    "kind": "door",
+    "levelId": "ground",
+    "x": 54.66427115753236,
+    "y": 157.3394806868295,
+    "floor": 0,
+    "indoor": false
+  }
+]

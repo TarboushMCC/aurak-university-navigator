@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
 
 import { polygonToPath } from "@/features/map/layers/polygonPath";
-import { CATEGORY_TINT, mapVar } from "@/features/map/mapTheme";
+import { buildingTint, mapVar } from "@/features/map/mapTheme";
 
 import type { Building, MapFeature } from "@/domain/schema";
 
@@ -37,7 +37,7 @@ export function BuildingsLayer({
         const isHovered = hoveredId === building.id;
         const isSelected = selectedId === building.id;
         const dimmed = hasRoute && routeBuildingIds && !routeBuildingIds.has(building.id);
-        const tint = CATEGORY_TINT[building.category] ?? mapVar.buildingOutline;
+        const tint = buildingTint(building.id, building.category);
         const d = polygonToPath(f.geometry);
 
         return (
@@ -62,14 +62,15 @@ export function BuildingsLayer({
               />
             )}
             <path d={d} fill={mapVar.building} />
+            <path d={d} fill={tint} opacity={isHovered || isSelected ? 0.32 : 0.2} />
             <path
               d={d}
               fill="none"
-              stroke={mapVar.buildingOutline}
-              strokeWidth={isHovered || isSelected ? 1.4 : 0.8}
+              stroke={tint}
+              strokeWidth={isHovered || isSelected ? 2 : 1.3}
+              opacity={isHovered || isSelected ? 1 : 0.75}
               vectorEffect="non-scaling-stroke"
             />
-            <path d={d} fill={tint} opacity={isHovered || isSelected ? 0.14 : 0.06} />
           </motion.g>
         );
       })}

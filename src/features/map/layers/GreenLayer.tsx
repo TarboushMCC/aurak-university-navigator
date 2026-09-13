@@ -35,37 +35,102 @@ function FieldMarkings({ quad }: { quad: readonly Point[] }) {
   );
 }
 
-export function GreenLayer({ features }: { features: MapFeature[] }) {
+export function GreenLayer({
+  features,
+  hoveredId,
+  selectedId,
+  onHover,
+  onSelect,
+}: {
+  features: MapFeature[];
+  hoveredId?: string | null;
+  selectedId?: string | null;
+  onHover?: (id: string | null) => void;
+  onSelect?: (id: string) => void;
+}) {
   const lawns = features.filter((f) => f.layer === "lawn" && f.geometry.type === "Polygon");
   const fields = features.filter((f) => f.layer === "field" && f.geometry.type === "Polygon");
   const courts = features.filter((f) => f.layer === "court" && f.geometry.type === "Polygon");
+  const tappable = Boolean(onSelect);
 
   return (
     <g>
-      {lawns.map((f) =>
-        f.geometry.type === "Polygon" ? (
-          <path key={f.id} d={polygonToPath(f.geometry)} fill={mapVar.lawn} />
-        ) : null,
-      )}
-      {fields.map((f) =>
-        f.geometry.type === "Polygon" ? (
-          <g key={f.id}>
-            <path d={polygonToPath(f.geometry)} fill={mapVar.field} />
-            <FieldMarkings quad={f.geometry.coordinates[0] ?? []} />
-          </g>
-        ) : null,
-      )}
-      {courts.map((f) =>
-        f.geometry.type === "Polygon" ? (
-          <path
+      {lawns.map((f) => {
+        if (f.geometry.type !== "Polygon") return null;
+        const isActive = hoveredId === f.id || selectedId === f.id;
+        const d = polygonToPath(f.geometry);
+        return (
+          <g
             key={f.id}
-            d={polygonToPath(f.geometry)}
-            fill={mapVar.field}
-            stroke={mapVar.fieldLine}
-            strokeWidth={0.3}
-          />
-        ) : null,
-      )}
+            onPointerEnter={() => onHover?.(f.id)}
+            onPointerLeave={() => onHover?.(null)}
+            onClick={() => onSelect?.(f.id)}
+            style={{ cursor: tappable ? "pointer" : undefined }}
+          >
+            <path d={d} fill={mapVar.lawn} />
+            {isActive && (
+              <path
+                d={d}
+                fill="none"
+                stroke={mapVar.field}
+                strokeWidth={isActive && selectedId === f.id ? 2.5 : 1.8}
+                vectorEffect="non-scaling-stroke"
+              />
+            )}
+          </g>
+        );
+      })}
+      {fields.map((f) => {
+        if (f.geometry.type !== "Polygon") return null;
+        const isActive = hoveredId === f.id || selectedId === f.id;
+        const d = polygonToPath(f.geometry);
+        return (
+          <g
+            key={f.id}
+            onPointerEnter={() => onHover?.(f.id)}
+            onPointerLeave={() => onHover?.(null)}
+            onClick={() => onSelect?.(f.id)}
+            style={{ cursor: tappable ? "pointer" : undefined }}
+          >
+            <path d={d} fill={mapVar.field} />
+            <FieldMarkings quad={f.geometry.coordinates[0] ?? []} />
+            {isActive && (
+              <path
+                d={d}
+                fill="none"
+                stroke={mapVar.fieldLine}
+                strokeWidth={selectedId === f.id ? 2.5 : 1.8}
+                vectorEffect="non-scaling-stroke"
+              />
+            )}
+          </g>
+        );
+      })}
+      {courts.map((f) => {
+        if (f.geometry.type !== "Polygon") return null;
+        const isActive = hoveredId === f.id || selectedId === f.id;
+        const d = polygonToPath(f.geometry);
+        return (
+          <g
+            key={f.id}
+            onPointerEnter={() => onHover?.(f.id)}
+            onPointerLeave={() => onHover?.(null)}
+            onClick={() => onSelect?.(f.id)}
+            style={{ cursor: tappable ? "pointer" : undefined }}
+          >
+            <path d={d} fill={mapVar.field} stroke={mapVar.fieldLine} strokeWidth={0.3} />
+            {isActive && (
+              <path
+                d={d}
+                fill="none"
+                stroke={mapVar.fieldLine}
+                strokeWidth={selectedId === f.id ? 2.5 : 1.8}
+                vectorEffect="non-scaling-stroke"
+              />
+            )}
+          </g>
+        );
+      })}
     </g>
   );
 }

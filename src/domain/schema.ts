@@ -109,6 +109,9 @@ export const mapFeatureSchema = z.object({
   heightM: z.number().positive().optional(),
   variant: z.string().optional(),
   label: z.string().optional(),
+  mapNumber: z.number().optional(),
+  /** The Place this feature represents, when it isn't a building (buildings use `buildingId` instead). */
+  placeId: z.string().optional(),
 });
 export type MapFeature = z.infer<typeof mapFeatureSchema>;
 

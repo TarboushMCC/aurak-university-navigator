@@ -1,1 +1,1649 @@
-[]
+[
+  {
+    "id": "edge-1789291954415-4",
+    "from": "node-1789291954415-1",
+    "to": "node-1789291954415-2",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 10.949853789354563,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789291954415-5",
+    "from": "node-1789291954415-2",
+    "to": "node-1789291954415-3",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 72.08653744658432,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789291992629-8",
+    "from": "node-1789291954415-3",
+    "to": "node-1789291992629-6",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 85.31791575071689,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789291992629-9",
+    "from": "node-1789291992629-6",
+    "to": "node-1789291992629-7",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 49.28279028911466,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292016840-12",
+    "from": "node-1789291992629-6",
+    "to": "node-1789292016840-10",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 27.375584965026626,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292016840-13",
+    "from": "node-1789292016840-10",
+    "to": "node-1789292016840-11",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 6.163515789408789,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292030835-15",
+    "from": "node-1789292016840-10",
+    "to": "node-1789292030835-14",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 23.044834172109294,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292057012-20",
+    "from": "node-1789291954415-2",
+    "to": "node-1789292057012-16",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 68.89320777567481,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292057012-21",
+    "from": "node-1789292057012-16",
+    "to": "node-1789292057012-17",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 73.23283227796733,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292057012-22",
+    "from": "node-1789292057012-17",
+    "to": "node-1789292057012-18",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 19.167674836915687,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292057012-23",
+    "from": "node-1789292057012-18",
+    "to": "node-1789292057012-19",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 22.35595148659891,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292078912-25",
+    "from": "node-1789292057012-18",
+    "to": "node-1789292078912-24",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 14.108563674555842,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292106311-29",
+    "from": "node-1789291954415-1",
+    "to": "node-1789292106311-26",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 31.667469135130446,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292106311-30",
+    "from": "node-1789292106311-26",
+    "to": "node-1789292106311-27",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 7.185574846811104,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292106311-31",
+    "from": "node-1789292106311-27",
+    "to": "node-1789292106311-28",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 10.525324795747235,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292132344-33",
+    "from": "node-1789292106311-28",
+    "to": "node-1789292132344-32",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 47.48123577301738,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292148906-39",
+    "from": "node-1789292148906-35",
+    "to": "node-1789292148906-36",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 22.226469374458045,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292160921-40",
+    "from": "node-1789292106311-28",
+    "to": "node-1789292148906-35",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 62.22194737106408,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292203373-45",
+    "from": "node-1789292106311-28",
+    "to": "node-1789292203373-41",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 81.5929789167463,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292203373-46",
+    "from": "node-1789292203373-41",
+    "to": "node-1789292203373-42",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 18.350138205726225,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292203373-47",
+    "from": "node-1789292203373-42",
+    "to": "node-1789292203373-43",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 45.17725347664863,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292203373-48",
+    "from": "node-1789292203373-43",
+    "to": "node-1789292203373-44",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 16.56379367862571,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292218283-51",
+    "from": "node-1789292203373-44",
+    "to": "node-1789292218283-49",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 13.470799135187312,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292218283-52",
+    "from": "node-1789292218283-49",
+    "to": "node-1789292218283-50",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 12.626014579172411,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292233906-54",
+    "from": "node-1789292203373-42",
+    "to": "node-1789292233906-53",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 55.66543060582124,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292233906-55",
+    "from": "node-1789292233906-53",
+    "to": "node-1789292030835-14",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 15.981734418644324,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292240747-57",
+    "from": "node-1789292233906-53",
+    "to": "node-1789292240747-56",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 28.338070659829206,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292254224-60",
+    "from": "node-1789292240747-56",
+    "to": "node-1789292254224-58",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 58.275076996276304,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292254224-61",
+    "from": "node-1789292254224-58",
+    "to": "node-1789292254224-59",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 14.382538098367984,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292286041-65",
+    "from": "node-1789292057012-19",
+    "to": "node-1789292286041-62",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 11.650949314725928,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292286041-66",
+    "from": "node-1789292286041-62",
+    "to": "node-1789292286041-63",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 31.024585736504605,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292286041-67",
+    "from": "node-1789292286041-63",
+    "to": "node-1789292286041-64",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 47.2217954825892,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292286041-68",
+    "from": "node-1789292286041-64",
+    "to": "node-1789292148906-35",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 10.28946377991078,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292299361-69",
+    "from": "node-1789292106311-27",
+    "to": "node-1789292286041-64",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 61.99482915381083,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292322057-72",
+    "from": "node-1789292148906-35",
+    "to": "node-1789292322057-70",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 37.39492459684938,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292322057-73",
+    "from": "node-1789292322057-70",
+    "to": "node-1789292322057-71",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 21.44346367081937,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292343875-74",
+    "from": "node-1789292322057-70",
+    "to": "node-1789292286041-63",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 14.70103963143061,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292355216-77",
+    "from": "node-1789292322057-71",
+    "to": "node-1789292355216-75",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 15.915988919440277,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292355216-78",
+    "from": "node-1789292355216-75",
+    "to": "node-1789292355216-76",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 37.727632747677404,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292355216-79",
+    "from": "node-1789292355216-76",
+    "to": "node-1789292148906-36",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 15.566580100925853,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292378182-82",
+    "from": "node-1789292240747-56",
+    "to": "node-1789292378182-80",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 12.784885716686068,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292378182-83",
+    "from": "node-1789292378182-80",
+    "to": "node-1789292378182-81",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 13.004952290677872,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292378182-84",
+    "from": "node-1789292378182-81",
+    "to": "node-1789292218283-50",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 27.128750570199102,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292390557-87",
+    "from": "node-1789292378182-81",
+    "to": "node-1789292390557-85",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 15.829257710955966,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292390557-88",
+    "from": "node-1789292390557-85",
+    "to": "node-1789292390557-86",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 15.412109608461394,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292405783-92",
+    "from": "node-1789292390557-86",
+    "to": "node-1789292405783-89",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 14.726991448725249,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292405783-93",
+    "from": "node-1789292405783-89",
+    "to": "node-1789292405783-90",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 3.721770657216897,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292405783-94",
+    "from": "node-1789292405783-90",
+    "to": "node-1789292405783-91",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 8.111851200954618,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292422823-99",
+    "from": "node-1789292405783-91",
+    "to": "node-1789292422823-95",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 6.529931749948313,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292422823-100",
+    "from": "node-1789292422823-95",
+    "to": "node-1789292422823-96",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 3.8906008115272006,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292422823-101",
+    "from": "node-1789292422823-96",
+    "to": "node-1789292422823-97",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 17.91685973912769,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292422824-102",
+    "from": "node-1789292422823-97",
+    "to": "node-1789292422823-98",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 7.657256812993092,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292422824-103",
+    "from": "node-1789292422823-98",
+    "to": "node-1789292254224-59",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 12.920697414650453,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292437172-107",
+    "from": "node-1789292422823-98",
+    "to": "node-1789292437171-104",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 20.88052275529815,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292437172-108",
+    "from": "node-1789292437171-104",
+    "to": "node-1789292437171-105",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 22.139238919544916,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292437172-109",
+    "from": "node-1789292437171-105",
+    "to": "node-1789292437171-106",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 13.98698225786659,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292583145-114",
+    "from": "node-1789292437171-106",
+    "to": "node-1789292583145-110",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 16.610770552926883,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292583145-115",
+    "from": "node-1789292583145-110",
+    "to": "node-1789292583145-111",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 22.203002842095636,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292583145-116",
+    "from": "node-1789292583145-111",
+    "to": "node-1789292583145-112",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 12.783585044182752,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292583145-117",
+    "from": "node-1789292583145-112",
+    "to": "node-1789292583145-113",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 15.885708601869425,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292599765-120",
+    "from": "node-1789292583145-112",
+    "to": "node-1789292599765-118",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 49.34825230524573,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292599765-121",
+    "from": "node-1789292599765-118",
+    "to": "node-1789292599765-119",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 7.089943272656781,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292616956-125",
+    "from": "node-1789292599765-119",
+    "to": "node-1789292616956-122",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 23.21952739381547,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292616956-126",
+    "from": "node-1789292616956-122",
+    "to": "node-1789292616956-123",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 5.5260358445680975,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292616956-127",
+    "from": "node-1789292616956-123",
+    "to": "node-1789292616956-124",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 28.942961974976356,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292636375-129",
+    "from": "node-1789292616956-124",
+    "to": "node-1789292636375-128",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 17.74386249880268,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292670583-131",
+    "from": "node-1789292132344-32",
+    "to": "node-1789292670583-130",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 80.89581319696039,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292670583-132",
+    "from": "node-1789292670583-130",
+    "to": "node-1789292203373-41",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 47.643651960499156,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292678766-133",
+    "from": "node-1789292670583-130",
+    "to": "node-1789292203373-43",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 19.807596391851376,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292696579-136",
+    "from": "node-1789292132344-32",
+    "to": "node-1789292696579-134",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 19.53709779576932,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292696579-137",
+    "from": "node-1789292696579-134",
+    "to": "node-1789292696579-135",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 9.594691144946744,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292696579-138",
+    "from": "node-1789292696579-135",
+    "to": "node-1789292355216-76",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 37.46504589501903,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292710455-143",
+    "from": "node-1789292132344-32",
+    "to": "node-1789292710455-139",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 13.774851329657073,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292710455-144",
+    "from": "node-1789292710455-139",
+    "to": "node-1789292710455-140",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 41.06258537728457,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292717647-148",
+    "from": "node-1789292710455-140",
+    "to": "node-1789292717647-147",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 27.764419281456227,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292737268-150",
+    "from": "node-1789292710455-139",
+    "to": "node-1789292737268-149",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 26.569108471092957,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292746321-152",
+    "from": "node-1789292737268-149",
+    "to": "node-1789292746321-151",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 32.595905286111176,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292756687-154",
+    "from": "node-1789292746321-151",
+    "to": "node-1789292756687-153",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 25.781818036328794,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292756687-155",
+    "from": "node-1789292756687-153",
+    "to": "node-1789292710455-139",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 52.24789617150395,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292790948-162",
+    "from": "node-1789292746321-151",
+    "to": "node-1789292790948-159",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 32.789307258738226,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292831899-167",
+    "from": "node-1789292831899-165",
+    "to": "node-1789292756687-153",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 38.553285127801864,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292843901-168",
+    "from": "node-1789292790948-159",
+    "to": "node-1789292831899-165",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 13.146238911555411,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292855263-170",
+    "from": "node-1789292746321-151",
+    "to": "node-1789292855263-169",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 28.515244243110885,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292855263-171",
+    "from": "node-1789292855263-169",
+    "to": "node-1789292717647-147",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 27.606526780637733,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292863093-172",
+    "from": "node-1789292855263-169",
+    "to": "node-1789292737268-149",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 16.198265143056926,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292872581-174",
+    "from": "node-1789292746321-151",
+    "to": "node-1789292872581-173",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 26.919357166590963,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292872581-175",
+    "from": "node-1789292872581-173",
+    "to": "node-1789292790948-159",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 17.133462275380392,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292883787-177",
+    "from": "node-1789292872581-173",
+    "to": "node-1789292883787-176",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 20.703260658602158,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292904945-178",
+    "from": "node-1789292831899-165",
+    "to": "node-1789292203373-43",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 19.21759160842717,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292915355-180",
+    "from": "node-1789292831899-165",
+    "to": "node-1789292915355-179",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 12.151742381479204,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292928774-185",
+    "from": "node-1789292915355-179",
+    "to": "node-1789292928774-181",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 62.57357117087118,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292928774-186",
+    "from": "node-1789292928774-181",
+    "to": "node-1789292928774-182",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 11.508294740894764,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292928774-187",
+    "from": "node-1789292928774-182",
+    "to": "node-1789292928774-183",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 12.79314751600584,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292928774-188",
+    "from": "node-1789292928774-183",
+    "to": "node-1789292928774-184",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 11.971513256496745,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292928774-189",
+    "from": "node-1789292928774-184",
+    "to": "node-1789292599765-119",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 16.898817473718736,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292936371-192",
+    "from": "node-1789292928774-181",
+    "to": "node-1789292936371-190",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 11.785319743281816,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292936371-193",
+    "from": "node-1789292936371-190",
+    "to": "node-1789292936371-191",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 9.556799994782342,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292936371-194",
+    "from": "node-1789292936371-191",
+    "to": "node-1789292616956-124",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 12.94775563362504,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292947682-198",
+    "from": "node-1789292883787-176",
+    "to": "node-1789292947682-195",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 37.483346471488126,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292947683-199",
+    "from": "node-1789292947682-195",
+    "to": "node-1789292947682-196",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 34.225136066122396,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292947683-200",
+    "from": "node-1789292947682-196",
+    "to": "node-1789292947682-197",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 20.302853901094977,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292947683-201",
+    "from": "node-1789292947682-197",
+    "to": "node-1789292717647-147",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 29.65936337371533,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292956127-202",
+    "from": "node-1789292947682-197",
+    "to": "node-1789292710455-142",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 23.970179583154977,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292970498-204",
+    "from": "node-1789292947682-197",
+    "to": "node-1789292970498-203",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 15.002379207806184,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292970498-205",
+    "from": "node-1789292970498-203",
+    "to": "node-1789292947682-196",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 10.001007995461158,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789292985423-207",
+    "from": "node-1789292970498-203",
+    "to": "node-1789292985423-206",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 19.46367835666009,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789293003477-211",
+    "from": "node-1789292947682-195",
+    "to": "node-1789293003477-208",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 12.227421851281735,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789293003477-212",
+    "from": "node-1789293003477-208",
+    "to": "node-1789293003477-209",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 12.621144749707506,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789293003477-213",
+    "from": "node-1789293003477-209",
+    "to": "node-1789293003477-210",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 14.601587146474177,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789293003477-214",
+    "from": "node-1789293003477-210",
+    "to": "node-1789292636375-128",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 25.100449430160566,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789293012087-216",
+    "from": "node-1789293003477-210",
+    "to": "node-1789293012087-215",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 8.599320226831349,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789293040776-220",
+    "from": "node-1789292583145-110",
+    "to": "node-1789293040775-217",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 6.559097047918424,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789293040776-221",
+    "from": "node-1789293040775-217",
+    "to": "node-1789293040775-218",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 49.735294676480336,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789293060179-227",
+    "from": "node-1789293040775-218",
+    "to": "node-1789293060179-225",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 14.847114273322124,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789293060179-228",
+    "from": "node-1789293060179-225",
+    "to": "node-1789293060179-226",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 12.871529932643709,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789293060179-229",
+    "from": "node-1789293060179-226",
+    "to": "node-1789292928774-183",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 10.22883173187382,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789293066141-230",
+    "from": "node-1789292928774-184",
+    "to": "node-1789293060179-226",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 15.212277521775214,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789293076170-232",
+    "from": "node-1789292437171-105",
+    "to": "node-1789293076170-231",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 53.73679660229299,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789293076170-233",
+    "from": "node-1789293076170-231",
+    "to": "node-1789292390557-86",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 35.004689835496514,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789293086310-238",
+    "from": "node-1789293086310-235",
+    "to": "node-1789293060179-226",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 36.48247889602906,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789293108031-242",
+    "from": "node-1789292390557-85",
+    "to": "node-1789293108031-240",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 14.352042035905919,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789293108031-243",
+    "from": "node-1789293108031-240",
+    "to": "node-1789293108031-241",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 63.50223077179799,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789293108031-244",
+    "from": "node-1789293108031-241",
+    "to": "node-1789292915355-179",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 5.169802665632318,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789293115944-246",
+    "from": "node-1789293108031-240",
+    "to": "node-1789293115944-245",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 4.2997788707414,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789293115944-247",
+    "from": "node-1789293115944-245",
+    "to": "node-1789293086310-235",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 9.405519995387527,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789293146260-250",
+    "from": "node-1789292710455-140",
+    "to": "node-1789293146260-248",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 15.8181887597038,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789293146260-251",
+    "from": "node-1789293146260-248",
+    "to": "node-1789293146260-249",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 12.60250886444856,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789293146260-252",
+    "from": "node-1789293146260-249",
+    "to": "node-1789292710455-142",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 18.0045838112049,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789293185621-261",
+    "from": "node-1789293146260-248",
+    "to": "node-1789293185621-259",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 20.634368513868726,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789293185621-262",
+    "from": "node-1789293185621-259",
+    "to": "node-1789293185621-260",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 21.815452276565985,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789293208932-265",
+    "from": "node-1789293165086-255",
+    "to": "node-1789293208932-264",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 12.282004210463594,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789293230279-268",
+    "from": "node-1789292710455-142",
+    "to": "node-1789293230279-266",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 6.3226930570785465,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789293230279-269",
+    "from": "node-1789293230279-266",
+    "to": "node-1789293230279-267",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 7.272072402068882,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789293242144-271",
+    "from": "node-1789293230279-267",
+    "to": "node-1789293242144-270",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 55.96925233893489,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789293242144-272",
+    "from": "node-1789293242144-270",
+    "to": "node-1789293165086-255",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 11.911016342596609,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789293253784-274",
+    "from": "node-1789293253784-273",
+    "to": "node-1789293242144-270",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 76.13835228089339,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789293268837-277",
+    "from": "node-1789293230279-267",
+    "to": "node-1789293268837-275",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 6.363063351810292,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789293268837-278",
+    "from": "node-1789293268837-275",
+    "to": "node-1789293268837-276",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 9.580322472430282,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789293268837-279",
+    "from": "node-1789293268837-276",
+    "to": "node-1789292985423-206",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 40.568338992935416,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789293273667-281",
+    "from": "node-1789292985423-206",
+    "to": "node-1789293273667-280",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 13.90295450651456,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789293285375-283",
+    "from": "node-1789292985423-206",
+    "to": "node-1789293285375-282",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 49.43905237965235,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789293285375-284",
+    "from": "node-1789293285375-282",
+    "to": "node-1789293003477-209",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 12.325962899367823,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789293321887-292",
+    "from": "node-1789293208932-264",
+    "to": "node-1789293321887-290",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 22.721277995836456,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789293321887-293",
+    "from": "node-1789293321887-290",
+    "to": "node-1789293321887-291",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 55.39042202370538,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789293321887-294",
+    "from": "node-1789293321887-291",
+    "to": "node-1789293300286-286",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 14.489209122155657,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789293329897-296",
+    "from": "node-1789293321887-290",
+    "to": "node-1789293329897-295",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 26.986714065128666,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789293340105-297",
+    "from": "node-1789293300286-286",
+    "to": "node-1789292355216-75",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 26.57506347012657,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789293356178-303",
+    "from": "node-1789293300286-286",
+    "to": "node-1789293356178-298",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 8.974062363876762,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789293356178-304",
+    "from": "node-1789293356178-298",
+    "to": "node-1789293356178-299",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 26.47120088245414,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789293356178-305",
+    "from": "node-1789293356178-299",
+    "to": "node-1789293356178-300",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 35.77315811723336,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789293356178-306",
+    "from": "node-1789293356178-300",
+    "to": "node-1789293356178-301",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 36.23138544565179,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789293356178-307",
+    "from": "node-1789293356178-301",
+    "to": "node-1789293356178-302",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 27.062873975334114,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789293368816-309",
+    "from": "node-1789293356178-301",
+    "to": "node-1789293368816-308",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 33.38200748203859,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789293380299-312",
+    "from": "node-1789293356178-301",
+    "to": "node-1789293380299-310",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 45.19286723750342,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789293380299-313",
+    "from": "node-1789293380299-310",
+    "to": "node-1789293380299-311",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 14.207336053652563,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789293391460-315",
+    "from": "node-1789293380299-310",
+    "to": "node-1789293391460-314",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 38.47600199390556,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789293411140-317",
+    "from": "node-1789293391460-314",
+    "to": "node-1789293411140-316",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 8.395431422182972,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789293418761-318",
+    "from": "node-1789293208932-264",
+    "to": "node-1789293391460-314",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 101.99548886023138,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789293431699-320",
+    "from": "node-1789293208932-264",
+    "to": "node-1789293431699-319",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 29.54690586247859,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789293528903-326",
+    "from": "node-1789293356178-298",
+    "to": "node-1789293528903-324",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 66.65822819588736,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789293528903-327",
+    "from": "node-1789293528903-324",
+    "to": "node-1789293528903-325",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 24.651909412626352,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789293528903-328",
+    "from": "node-1789293528903-325",
+    "to": "node-1789292057012-18",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 39.5724935643363,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789293537243-329",
+    "from": "node-1789292322057-70",
+    "to": "node-1789293528903-325",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 43.56038294158298,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789293537243-330",
+    "from": "node-1789293528903-325",
+    "to": "node-1789292286041-63",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 34.54261384955275,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789293571512-332",
+    "from": "node-1789292696579-134",
+    "to": "node-1789293571512-331",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 15.933674129532024,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789293571512-333",
+    "from": "node-1789293571512-331",
+    "to": "node-1789292710455-139",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 17.19042786670484,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789293577115-335",
+    "from": "node-1789293571512-331",
+    "to": "node-1789293577115-334",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 6.357664251199811,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789293577115-336",
+    "from": "node-1789293577115-334",
+    "to": "node-1789293185621-260",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 50.06339530539873,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789293583183-338",
+    "from": "node-1789293577115-334",
+    "to": "node-1789293583183-337",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 51.72833067531337,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789293583183-339",
+    "from": "node-1789293583183-337",
+    "to": "node-1789293300286-286",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 13.933010449927247,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789293625327-341",
+    "from": "node-1789293040775-218",
+    "to": "node-1789293076170-231",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 15.756866555878142,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789293641880-342",
+    "from": "node-1789293583183-337",
+    "to": "node-1789292355216-76",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 29.015672159212865,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789293693977-343",
+    "from": "node-1789292616956-123",
+    "to": "node-1789292936371-191",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 18.82395976210689,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789293760700-344",
+    "from": "node-1789292078912-24",
+    "to": "node-1789293356178-300",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 117.05916630668804,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789294506343-347",
+    "from": "node-1789293165086-255",
+    "to": "node-1789294506343-345",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 23.193170934350015,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789294506343-348",
+    "from": "node-1789294506343-345",
+    "to": "node-1789294506343-346",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 21.824168325775155,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789294506343-349",
+    "from": "node-1789294506343-346",
+    "to": "node-1789293185621-260",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 33.48964949977916,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789294512868-351",
+    "from": "node-1789293242144-270",
+    "to": "node-1789294512868-350",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 16.54105332729212,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789294512868-352",
+    "from": "node-1789294512868-350",
+    "to": "node-1789293185621-260",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 37.11778420533517,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789294517339-353",
+    "from": "node-1789294506343-346",
+    "to": "node-1789293583183-337",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 46.57365671800082,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789294535865-354",
+    "from": "node-1789293185621-260",
+    "to": "node-1789293583183-337",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 57.28007354660351,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789294727941-357",
+    "from": "node-1789293380299-311",
+    "to": "node-1789294727941-355",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 24.96847553940932,
+    "accessible": null
+  },
+  {
+    "id": "edge-1789294727941-358",
+    "from": "node-1789294727941-355",
+    "to": "node-1789294727941-356",
+    "bidirectional": true,
+    "kind": "walkway",
+    "lengthM": 23.710797012514398,
+    "accessible": null
+  }
+]

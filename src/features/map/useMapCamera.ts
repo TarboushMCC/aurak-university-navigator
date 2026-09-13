@@ -121,13 +121,50 @@ function useGesturesOnCamera(
   const dragStart = useRef({ cx: 0, cy: 0 });
   const pinchStartScale = useRef(1);
 
+  // Zooms by `factor`, keeping the map-space point under (clientX, clientY)
+  // fixed on screen — otherwise the content visibly slides out from under
+  // the cursor on every scroll/pinch, which reads as "the map does its own
+  // thing" even though the math was technically zooming.
+  const zoomAt = useCallback(
+    (clientX: number, clientY: number, factor: number) => {
+      const el = containerRef.current;
+      if (!el) return;
+      const rect = el.getBoundingClientRect();
+      const sx = clientX - rect.left - rect.width / 2;
+      const sy = clientY - rect.top - rect.height / 2;
+      const s = scale.get();
+      const newScale = clampScale(s * factor);
+      const mapX = cx.get() + sx / s;
+      const mapY = cy.get() + sy / s;
+      cx.set(mapX - sx / newScale);
+      cy.set(mapY - sy / newScale);
+      scale.set(newScale);
+    },
+    [containerRef, cx, cy, scale],
+  );
+
   useGesture(
     {
       onDragStart: () => {
         dragStart.current = { cx: cx.get(), cy: cy.get() };
       },
-      onDrag: ({ offset: [dx, dy], pinching }) => {
-        if (pinching) return;
+      // `movement` (not `offset`) resets to [0,0] at the start of *this*
+      // gesture — it's the delta since `dragStart.current` was captured.
+      // `offset` instead accumulates across every drag the user has ever
+      // made on this camera, so combining it with a per-gesture dragStart
+      // anchor made the camera jump to an unrelated position on the second
+      // and later drags.
+      //
+      // A plain tap/click never gets an `onDragStart` from @use-gesture (it
+      // only decides retroactively, on pointer-up, that the gesture was
+      // "just a tap") — so `dragStart.current` would still hold whatever
+      // stale value it last had (or the ref's `{cx:0,cy:0}` initial value
+      // on the very first click of a session), and panning to that stale
+      // point is exactly what made selecting a place jump the camera to an
+      // unrelated spot. Taps should never move the camera at all, so bail
+      // out before touching it.
+      onDrag: ({ movement: [dx, dy], pinching, tap }) => {
+        if (pinching || tap) return;
         const s = scale.get();
         cx.set(dragStart.current.cx - dx / s);
         cy.set(dragStart.current.cy - dy / s);
@@ -135,13 +172,14 @@ function useGesturesOnCamera(
       onWheel: ({ delta: [, dy], event }) => {
         event.preventDefault();
         const factor = Math.exp(-dy * 0.0015);
-        scale.set(clampScale(scale.get() * factor));
+        zoomAt(event.clientX, event.clientY, factor);
       },
       onPinchStart: () => {
         pinchStartScale.current = scale.get();
       },
-      onPinch: ({ offset: [d] }) => {
-        scale.set(clampScale(pinchStartScale.current * d));
+      onPinch: ({ offset: [d], origin: [ox, oy] }) => {
+        const factor = (pinchStartScale.current * d) / scale.get();
+        zoomAt(ox, oy, factor);
       },
     },
     {

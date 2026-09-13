@@ -1,109 +1,5 @@
 [
   {
-    "id": "place.sports-hall",
-    "type": "sports",
-    "name": "Sports Hall",
-    "buildingId": "bldg-sports-hall",
-    "aliases": [
-      "sports hall",
-      "gym"
-    ],
-    "anchors": [],
-    "startable": true,
-    "mapNumber": 10
-  },
-  {
-    "id": "place.warehouse",
-    "type": "building",
-    "name": "Warehouse and Stores",
-    "buildingId": "bldg-warehouse",
-    "aliases": [
-      "warehouse",
-      "stores"
-    ],
-    "anchors": [],
-    "startable": true,
-    "mapNumber": 13
-  },
-  {
-    "id": "place.c",
-    "type": "building",
-    "name": "Recreation Hub",
-    "buildingId": "bldg-c",
-    "aliases": [
-      "recreation",
-      "recreation hub"
-    ],
-    "anchors": [],
-    "startable": true,
-    "mapNumber": 7
-  },
-  {
-    "id": "place.temp",
-    "type": "building",
-    "name": "Temporary Buildings",
-    "buildingId": "bldg-temp",
-    "aliases": [
-      "temporary buildings"
-    ],
-    "anchors": [],
-    "startable": true,
-    "mapNumber": 19
-  },
-  {
-    "id": "place.outdoor-comfort",
-    "type": "landmark",
-    "name": "RAK Center for Outdoor Comfort",
-    "buildingId": "bldg-outdoor-comfort",
-    "aliases": [
-      "outdoor comfort",
-      "outdoor comfort center"
-    ],
-    "anchors": [],
-    "startable": true,
-    "mapNumber": 20
-  },
-  {
-    "id": "place.g",
-    "type": "building",
-    "name": "School of Engineering and Computing",
-    "buildingId": "bldg-g",
-    "aliases": [
-      "engineering",
-      "computing",
-      "school of engineering"
-    ],
-    "anchors": [],
-    "startable": true,
-    "mapNumber": 5
-  },
-  {
-    "id": "place.l",
-    "type": "building",
-    "name": "Engineering Labs",
-    "buildingId": "bldg-l",
-    "aliases": [
-      "labs",
-      "engineering labs"
-    ],
-    "anchors": [],
-    "startable": true,
-    "mapNumber": 6
-  },
-  {
-    "id": "place.zeh",
-    "type": "landmark",
-    "name": "Zero Energy House (Solar Decathlon)",
-    "buildingId": "bldg-zeh",
-    "aliases": [
-      "zero energy house",
-      "solar decathlon"
-    ],
-    "anchors": [],
-    "startable": true,
-    "mapNumber": 18
-  },
-  {
     "id": "place.k",
     "type": "building",
     "name": "Abdullah Bin Ali Al Sharhan School of Arts and Sciences",
@@ -111,38 +7,17 @@
     "aliases": [
       "arts and sciences",
       "school of arts and sciences",
-      "al sharhan"
+      "al sharhan",
+      "building k",
+      "abdullah ali alsharhan school of arts and science"
     ],
-    "anchors": [],
+    "anchors": [
+      "node-1789292583145-113",
+      "node-1789292599765-119",
+      "node-1789292636375-128"
+    ],
     "startable": true,
     "mapNumber": 4
-  },
-  {
-    "id": "place.d",
-    "type": "service",
-    "name": "Admission and Registration",
-    "buildingId": "bldg-d",
-    "aliases": [
-      "admission",
-      "registration",
-      "admissions"
-    ],
-    "anchors": [],
-    "startable": true,
-    "mapNumber": 8
-  },
-  {
-    "id": "place.a",
-    "type": "service",
-    "name": "Student Life Hub",
-    "buildingId": "bldg-a",
-    "aliases": [
-      "student life",
-      "student life hub"
-    ],
-    "anchors": [],
-    "startable": true,
-    "mapNumber": 9
   },
   {
     "id": "place.h",
@@ -152,9 +27,15 @@
     "aliases": [
       "business school",
       "school of business",
-      "rak bank"
+      "rak bank",
+      "building h"
     ],
-    "anchors": [],
+    "anchors": [
+      "node-1789292240747-56",
+      "node-1789292254224-59",
+      "node-1789292390557-86",
+      "node-1789292405783-91"
+    ],
     "startable": true,
     "mapNumber": 2
   },
@@ -166,11 +47,142 @@
     "aliases": [
       "library",
       "main library",
-      "saqr"
+      "saqr",
+      "building j"
     ],
-    "anchors": [],
+    "anchors": [
+      "node-1789292218283-50"
+    ],
     "startable": true,
     "mapNumber": 3
+  },
+  {
+    "id": "place.zeh",
+    "type": "landmark",
+    "name": "Zero Energy House (Solar Decathlon)",
+    "buildingId": "bldg-zeh",
+    "aliases": [
+      "zero energy house",
+      "solar decathlon"
+    ],
+    "anchors": [
+      "node-1789293012087-215"
+    ],
+    "startable": true,
+    "mapNumber": 18
+  },
+  {
+    "id": "place.l",
+    "type": "building",
+    "name": "Engineering Labs",
+    "buildingId": "bldg-l",
+    "aliases": [
+      "labs",
+      "engineering labs",
+      "building l"
+    ],
+    "anchors": [
+      "node-1789292970498-203",
+      "node-1789292985423-206"
+    ],
+    "startable": true,
+    "mapNumber": 6
+  },
+  {
+    "id": "place.g",
+    "type": "building",
+    "name": "School of Engineering and Computing",
+    "buildingId": "bldg-g",
+    "aliases": [
+      "engineering",
+      "school of engineering",
+      "building g"
+    ],
+    "anchors": [
+      "node-1789292717647-147",
+      "node-1789292746321-151",
+      "node-1789292883787-176"
+    ],
+    "startable": true,
+    "mapNumber": 5
+  },
+  {
+    "id": "place.parking",
+    "type": "parking",
+    "name": "Student Parking",
+    "aliases": [
+      "parking",
+      "car park",
+      "student parking"
+    ],
+    "anchors": [
+      "node-1789293230279-267",
+      "node-1789293242144-270",
+      "node-1789293273667-280"
+    ],
+    "startable": true,
+    "mapNumber": 16
+  },
+  {
+    "id": "place.d",
+    "type": "service",
+    "name": "Admission and Registration",
+    "buildingId": "bldg-d",
+    "aliases": [
+      "student affairs",
+      "building d"
+    ],
+    "anchors": [
+      "node-1789292106311-26"
+    ],
+    "startable": true,
+    "mapNumber": 8
+  },
+  {
+    "id": "place.i",
+    "type": "service",
+    "name": "Administration Building",
+    "buildingId": "bldg-i",
+    "aliases": [
+      "administration",
+      "admin building",
+      "building i"
+    ],
+    "anchors": [
+      "node-1789292057012-19"
+    ],
+    "startable": true
+  },
+  {
+    "id": "place.facilities-mgmt",
+    "type": "building",
+    "name": "Office of Facilities Management",
+    "buildingId": "bldg-facilities-mgmt",
+    "aliases": [
+      "facilities management"
+    ],
+    "anchors": [
+      "node-1789292078912-24"
+    ],
+    "startable": true,
+    "mapNumber": 21
+  },
+  {
+    "id": "place.res-5",
+    "type": "residence",
+    "name": "Student Residential Hall 5",
+    "buildingId": "bldg-res-5",
+    "aliases": [
+      "residence 5",
+      "dorm 5",
+      "residential hall 5",
+      "student housing"
+    ],
+    "anchors": [
+      "node-1789292286041-64"
+    ],
+    "startable": true,
+    "mapNumber": 15
   },
   {
     "id": "place.mosque",
@@ -182,149 +194,208 @@
       "masjid",
       "prayer room"
     ],
-    "anchors": [],
+    "anchors": [
+      "node-1789292016840-11"
+    ],
     "startable": true,
     "mapNumber": 17
   },
   {
-    "id": "place.facilities-mgmt",
-    "type": "building",
-    "name": "Office of Facilities Management",
-    "buildingId": "bldg-facilities-mgmt",
-    "aliases": [
-      "facilities management"
-    ],
-    "anchors": [],
-    "startable": true,
-    "mapNumber": 21
-  },
-  {
-    "id": "place.admin",
-    "type": "building",
-    "name": "Admin Building",
-    "buildingId": "bldg-admin",
-    "aliases": [
-      "admin",
-      "administration"
-    ],
-    "anchors": [],
-    "startable": true,
-    "mapNumber": 22
-  },
-  {
-    "id": "place.res-1",
-    "type": "residence",
-    "name": "Residential Hall 1",
-    "buildingId": "bldg-res-1",
-    "aliases": [
-      "residence 1",
-      "dorm 1",
-      "residential halls",
-      "dorms",
-      "student housing"
-    ],
-    "anchors": [],
-    "startable": true
-  },
-  {
     "id": "place.res-2",
     "type": "residence",
-    "name": "Residential Hall 2",
+    "name": "Student Residential Hall 2",
     "buildingId": "bldg-res-2",
     "aliases": [
       "residence 2",
       "dorm 2",
-      "residential halls",
-      "dorms",
+      "residential hall 2",
       "student housing"
     ],
-    "anchors": [],
-    "startable": true
+    "anchors": [
+      "node-1789292030835-14"
+    ],
+    "startable": true,
+    "mapNumber": 15
+  },
+  {
+    "id": "place.res-1",
+    "type": "residence",
+    "name": "Student Residential Hall 1",
+    "buildingId": "bldg-res-1",
+    "aliases": [
+      "residence 1",
+      "dorm 1",
+      "residential hall 1",
+      "student housing"
+    ],
+    "anchors": [
+      "node-1789291992629-7"
+    ],
+    "startable": true,
+    "mapNumber": 15
   },
   {
     "id": "place.res-3",
     "type": "residence",
-    "name": "Residential Hall 3",
+    "name": "Student Residential Hall 3",
     "buildingId": "bldg-res-3",
     "aliases": [
       "residence 3",
       "dorm 3",
-      "residential halls",
-      "dorms",
+      "residential hall 3",
       "student housing"
     ],
-    "anchors": [],
-    "startable": true
+    "anchors": [
+      "node-1789291954415-3"
+    ],
+    "startable": true,
+    "mapNumber": 15
   },
   {
     "id": "place.res-4",
     "type": "residence",
-    "name": "Residential Hall 4",
+    "name": "Student Residential Hall 4",
     "buildingId": "bldg-res-4",
     "aliases": [
       "residence 4",
       "dorm 4",
-      "residential halls",
-      "dorms",
+      "residential hall 4",
       "student housing"
     ],
-    "anchors": [],
-    "startable": true
-  },
-  {
-    "id": "place.res-5",
-    "type": "residence",
-    "name": "Residential Hall 5",
-    "buildingId": "bldg-res-5",
-    "aliases": [
-      "residence 5",
-      "dorm 5",
-      "residential halls",
-      "dorms",
-      "student housing"
+    "anchors": [
+      "node-1789291954415-3"
     ],
-    "anchors": [],
-    "startable": true
+    "startable": true,
+    "mapNumber": 15
   },
   {
     "id": "place.res-6",
     "type": "residence",
-    "name": "Residential Hall 6",
+    "name": "Student Residential Hall 6",
     "buildingId": "bldg-res-6",
     "aliases": [
       "residence 6",
       "dorm 6",
-      "residential halls",
-      "dorms",
+      "residential hall 6",
       "student housing"
     ],
-    "anchors": [],
+    "anchors": [
+      "node-1789292286041-62"
+    ],
+    "startable": true,
+    "mapNumber": 15
+  },
+  {
+    "id": "place.a",
+    "type": "building",
+    "name": "Student Life Hub",
+    "buildingId": "bldg-a",
+    "aliases": [
+      "building a"
+    ],
+    "anchors": [
+      "node-1789292148906-36",
+      "node-1789292322057-71"
+    ],
+    "startable": true,
+    "mapNumber": 9
+  },
+  {
+    "id": "place.sports-fields",
+    "type": "sports",
+    "name": "Sports Fields",
+    "aliases": [
+      "sports fields",
+      "courts",
+      "tennis courts",
+      "tennis"
+    ],
+    "anchors": [
+      "node-1789293380299-311",
+      "node-1789294727941-355",
+      "node-1789294727941-356"
+    ],
+    "startable": true,
+    "mapNumber": 11
+  },
+  {
+    "id": "place.e",
+    "type": "building",
+    "name": "Building E",
+    "buildingId": "bldg-e",
+    "aliases": [
+      "building e"
+    ],
+    "anchors": [
+      "node-1789293391460-314"
+    ],
     "startable": true
   },
   {
-    "id": "place.gate1",
-    "type": "gate",
-    "name": "AURAK Main Gate",
+    "id": "place.temp",
+    "type": "landmark",
+    "name": "Temporary Buildings",
+    "buildingId": "bldg-temp",
     "aliases": [
-      "gate 1",
-      "main gate",
-      "entrance"
+      "temporary buildings",
+      "temp building"
     ],
-    "anchors": [],
+    "anchors": [
+      "node-1789293356178-300"
+    ],
     "startable": true,
-    "mapNumber": 1
+    "mapNumber": 19
   },
   {
-    "id": "place.parking",
-    "type": "parking",
-    "name": "Student Parking",
+    "id": "place.warehouse",
+    "type": "landmark",
+    "name": "Warehouse and Stores",
+    "buildingId": "bldg-warehouse",
     "aliases": [
-      "parking",
-      "car park"
+      "warehouse",
+      "stores",
+      "storage"
     ],
-    "anchors": [],
+    "anchors": [
+      "node-1789293356178-302"
+    ],
     "startable": true,
-    "mapNumber": 16
+    "mapNumber": 13
+  },
+  {
+    "id": "place.sports-complex",
+    "type": "sports",
+    "name": "Sports Hall",
+    "buildingId": "bldg-sports-complex",
+    "aliases": [
+      "sports complex",
+      "gym"
+    ],
+    "anchors": [
+      "node-1789293368816-308"
+    ],
+    "startable": true,
+    "mapNumber": 10
+  },
+  {
+    "id": "place.c",
+    "type": "service",
+    "name": "Recreation Hub",
+    "buildingId": "bldg-c",
+    "aliases": [
+      "student center",
+      "cafeteria",
+      "building c",
+      "student center / cafeteria"
+    ],
+    "anchors": [
+      "node-1789293165086-255",
+      "node-1789293208932-264",
+      "node-1789293321887-291",
+      "node-1789294506343-345"
+    ],
+    "startable": true,
+    "mapNumber": 7
   },
   {
     "id": "place.green-lawn",
@@ -335,9 +406,26 @@
       "the lawn",
       "central lawn"
     ],
-    "anchors": [],
+    "anchors": [
+      "node-1789293185621-260"
+    ],
     "startable": true,
     "mapNumber": 14
+  },
+  {
+    "id": "place.outdoor-comfort",
+    "type": "landmark",
+    "name": "RAK Center for Outdoor Comfort",
+    "buildingId": "bldg-outdoor-comfort",
+    "aliases": [
+      "outdoor comfort",
+      "outdoor comfort center"
+    ],
+    "anchors": [
+      "node-1789293329897-295"
+    ],
+    "startable": true,
+    "mapNumber": 20
   },
   {
     "id": "place.football-field",
@@ -348,20 +436,71 @@
       "pitch",
       "stadium"
     ],
-    "anchors": [],
+    "anchors": [
+      "node-1789293411140-316",
+      "node-1789293431699-319"
+    ],
     "startable": true,
     "mapNumber": 12
   },
   {
-    "id": "place.sports-fields",
-    "type": "sports",
-    "name": "Sports Fields",
+    "id": "place.gate.node-1789291954415-1",
+    "type": "gate",
+    "name": "Gate",
     "aliases": [
-      "sports fields",
-      "courts"
+      "gate"
     ],
-    "anchors": [],
-    "startable": true,
-    "mapNumber": 11
+    "anchors": [
+      "node-1789291954415-1"
+    ],
+    "startable": true
+  },
+  {
+    "id": "place.gate.node-1789292030835-14",
+    "type": "gate",
+    "name": "Gate",
+    "aliases": [
+      "gate"
+    ],
+    "anchors": [
+      "node-1789292030835-14"
+    ],
+    "startable": true
+  },
+  {
+    "id": "place.gate.node-1789292057012-17",
+    "type": "gate",
+    "name": "Gate",
+    "aliases": [
+      "gate"
+    ],
+    "anchors": [
+      "node-1789292057012-17"
+    ],
+    "startable": true
+  },
+  {
+    "id": "place.gate.node-1789292437171-106",
+    "type": "gate",
+    "name": "Gate",
+    "aliases": [
+      "gate"
+    ],
+    "anchors": [
+      "node-1789292437171-106"
+    ],
+    "startable": true
+  },
+  {
+    "id": "place.gate.node-1789293253784-273",
+    "type": "gate",
+    "name": "Gate",
+    "aliases": [
+      "gate"
+    ],
+    "anchors": [
+      "node-1789293253784-273"
+    ],
+    "startable": true
   }
 ]
