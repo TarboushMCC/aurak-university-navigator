@@ -662,7 +662,7 @@
     "to": "node-1789292710455-140",
     "bidirectional": true,
     "kind": "walkway",
-    "lengthM": 41.06258537728457,
+    "lengthM": 42.60222461996376,
     "accessible": null
   },
   {
@@ -671,7 +671,7 @@
     "to": "node-1789292717647-147",
     "bidirectional": true,
     "kind": "walkway",
-    "lengthM": 27.764419281456227,
+    "lengthM": 27.06456672670363,
     "accessible": null
   },
   {
@@ -689,7 +689,7 @@
     "to": "node-1789292746321-151",
     "bidirectional": true,
     "kind": "walkway",
-    "lengthM": 32.595905286111176,
+    "lengthM": 32.52558307462643,
     "accessible": null
   },
   {
@@ -698,7 +698,7 @@
     "to": "node-1789292756687-153",
     "bidirectional": true,
     "kind": "walkway",
-    "lengthM": 25.781818036328794,
+    "lengthM": 27.15034623115665,
     "accessible": null
   },
   {
@@ -716,7 +716,7 @@
     "to": "node-1789292790948-159",
     "bidirectional": true,
     "kind": "walkway",
-    "lengthM": 32.789307258738226,
+    "lengthM": 34.294249440670264,
     "accessible": null
   },
   {
@@ -743,7 +743,7 @@
     "to": "node-1789292855263-169",
     "bidirectional": true,
     "kind": "walkway",
-    "lengthM": 28.515244243110885,
+    "lengthM": 27.63667108965837,
     "accessible": null
   },
   {
@@ -770,7 +770,7 @@
     "to": "node-1789292872581-173",
     "bidirectional": true,
     "kind": "walkway",
-    "lengthM": 26.919357166590963,
+    "lengthM": 27.87665211500656,
     "accessible": null
   },
   {
@@ -788,7 +788,7 @@
     "to": "node-1789292883787-176",
     "bidirectional": true,
     "kind": "walkway",
-    "lengthM": 20.703260658602158,
+    "lengthM": 35.062636568349994,
     "accessible": null
   },
   {
@@ -887,7 +887,7 @@
     "to": "node-1789292947682-195",
     "bidirectional": true,
     "kind": "walkway",
-    "lengthM": 37.483346471488126,
+    "lengthM": 23.12370994942108,
     "accessible": null
   },
   {
@@ -1130,7 +1130,7 @@
     "to": "node-1789293146260-248",
     "bidirectional": true,
     "kind": "walkway",
-    "lengthM": 15.8181887597038,
+    "lengthM": 14.280986058475666,
     "accessible": null
   },
   {

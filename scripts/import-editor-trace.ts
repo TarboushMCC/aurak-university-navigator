@@ -383,7 +383,18 @@ for (const shape of trace.shapes) {
     continue;
   }
 
-  console.warn(`Unrecognized landscape shape "${shape.id}" ("${shape.label}") — skipped`);
+  // A shape that doesn't match any known building name or landscape keyword
+  // still got traced for a reason — dropping it entirely made it silently
+  // vanish from the map instead of just not being a selectable destination.
+  // Render it as an inert decorative footprint (same treatment as the
+  // explicit NON_DESTINATION_RE matches above) rather than losing it.
+  if (name.trim()) {
+    const ring = toMapRing(shape.points);
+    features.push({ id: nextId("plaza"), layer: "plaza", geometry: { type: "Polygon", coordinates: [ring] } });
+    console.warn(`Shape "${shape.id}" ("${shape.label}") didn't match a known building or category — drawn as a plain decorative shape, not a selectable destination.`);
+  } else {
+    console.warn(`Shape "${shape.id}" has no label — skipped entirely.`);
+  }
 }
 
 // ---------------------------------------------------------------------------
