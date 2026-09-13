@@ -125,6 +125,7 @@ function useGesturesOnCamera(
 ) {
   const dragStart = useRef({ cx: 0, cy: 0 });
   const pinchStartScale = useRef(1);
+  const pinchStartDistance = useRef(1);
 
   // Screen-space vectors need to be rotated back into map space before
   // they can be applied to cx/cy, otherwise dragging/zooming only works
@@ -199,12 +200,23 @@ function useGesturesOnCamera(
         const factor = Math.exp(-dy * 0.0015);
         zoomAt(event.clientX, event.clientY, factor);
       },
-      onPinchStart: () => {
+      // `offset` (like drag's) accumulates across every pinch the user has
+      // ever made on this camera rather than resetting per-gesture, so
+      // reusing it here caused the exact same class of bug as the drag one
+      // above: the second (and every later) pinch started from whatever
+      // scale ratio the previous pinch had left `offset` sitting at, not
+      // from 1, producing a jump the instant two fingers touched down and
+      // increasingly wrong zooming after. `da[0]` (the raw current
+      // finger-to-finger distance in pixels) has no such memory — it's
+      // just the physical distance this instant — so anchor a fresh ratio
+      // to it at the start of each gesture instead.
+      onPinchStart: ({ da: [d] }) => {
         pinchStartScale.current = scale.get();
+        pinchStartDistance.current = d || 1;
       },
-      onPinch: ({ offset: [d], origin: [ox, oy] }) => {
-        const factor = (pinchStartScale.current * d) / scale.get();
-        zoomAt(ox, oy, factor);
+      onPinch: ({ da: [d], origin: [ox, oy] }) => {
+        const targetScale = pinchStartScale.current * (d / pinchStartDistance.current);
+        zoomAt(ox, oy, targetScale / scale.get());
       },
     },
     {
