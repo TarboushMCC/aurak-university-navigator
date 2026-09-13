@@ -65,7 +65,12 @@ export function HomePage() {
   }
 
   return (
-    <main className="flex h-screen w-screen flex-col overflow-hidden">
+    // `h-dvh` (dynamic viewport height), not `h-screen` (100vh): on mobile
+    // Chrome, 100vh includes the area the collapsible URL bar covers, so
+    // anything sized to it and clipped with overflow-hidden — like the
+    // "Navigate here" button on the building info card — was rendering
+    // below the actually-visible viewport whenever the toolbar was shown.
+    <main className="flex h-dvh w-full flex-col overflow-hidden">
       <header
         className="z-10 flex flex-col gap-2.5 border-b px-4 py-3 sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:px-6"
         style={{ borderColor: "var(--color-border)", background: "var(--color-surface)" }}

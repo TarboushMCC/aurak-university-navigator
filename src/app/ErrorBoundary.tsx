@@ -27,7 +27,7 @@ export class ErrorBoundary extends Component<Props, State> {
   override render() {
     if (this.state.error) {
       return (
-        <div className="flex h-screen w-screen items-center justify-center bg-(--color-ground) p-6">
+        <div className="flex h-dvh w-full items-center justify-center bg-(--color-ground) p-6">
           <div className="max-w-lg rounded-xl border border-red-300 bg-red-50 p-6 text-red-900">
             <h1 className="mb-2 text-lg font-bold">Campus data failed to load</h1>
             <pre className="max-h-80 overflow-auto text-xs whitespace-pre-wrap">

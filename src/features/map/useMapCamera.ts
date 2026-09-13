@@ -111,7 +111,7 @@ export function useMapCamera(
   // Bound directly to `containerRef` (via `target` in the config below), so
   // there is nothing to spread onto the JSX element.
 
-  useGesturesOnCamera(containerRef, cx, cy, scale);
+  useGesturesOnCamera(containerRef, cx, cy, scale, rotationDeg);
 
   return { cx, cy, scale, rotationDeg, snapshot, fitBounds, flyTo };
 }
@@ -121,9 +121,28 @@ function useGesturesOnCamera(
   cx: ReturnType<typeof useMotionValue<number>>,
   cy: ReturnType<typeof useMotionValue<number>>,
   scale: ReturnType<typeof useMotionValue<number>>,
+  rotationDeg: ReturnType<typeof useMotionValue<number>>,
 ) {
   const dragStart = useRef({ cx: 0, cy: 0 });
   const pinchStartScale = useRef(1);
+
+  // Screen-space vectors need to be rotated back into map space before
+  // they can be applied to cx/cy, otherwise dragging/zooming only works
+  // correctly when rotationDeg is 0 (e.g. every axis gets scrambled once
+  // the mobile auto-rotate in CampusMap kicks in — panning "only goes
+  // down" because a vertical drag was being applied to the map's
+  // horizontal axis instead).
+  const toMapVector = useCallback(
+    (sx: number, sy: number) => {
+      const rad = (rotationDeg.get() * Math.PI) / 180;
+      const cos = Math.cos(rad);
+      const sin = Math.sin(rad);
+      // Inverse of the screen-space rotation applied by the <g rotate(...)>
+      // transform in CampusMap (rotate by rotationDeg around the centre).
+      return { x: sx * cos + sy * sin, y: -sx * sin + sy * cos };
+    },
+    [rotationDeg],
+  );
 
   // Zooms by `factor`, keeping the map-space point under (clientX, clientY)
   // fixed on screen — otherwise the content visibly slides out from under
@@ -136,15 +155,16 @@ function useGesturesOnCamera(
       const rect = el.getBoundingClientRect();
       const sx = clientX - rect.left - rect.width / 2;
       const sy = clientY - rect.top - rect.height / 2;
+      const { x: mvx, y: mvy } = toMapVector(sx, sy);
       const s = scale.get();
       const newScale = clampScale(s * factor);
-      const mapX = cx.get() + sx / s;
-      const mapY = cy.get() + sy / s;
-      cx.set(mapX - sx / newScale);
-      cy.set(mapY - sy / newScale);
+      const mapX = cx.get() + mvx / s;
+      const mapY = cy.get() + mvy / s;
+      cx.set(mapX - mvx / newScale);
+      cy.set(mapY - mvy / newScale);
       scale.set(newScale);
     },
-    [containerRef, cx, cy, scale],
+    [containerRef, cx, cy, scale, toMapVector],
   );
 
   useGesture(
@@ -170,8 +190,9 @@ function useGesturesOnCamera(
       onDrag: ({ movement: [dx, dy], pinching, tap }) => {
         if (pinching || tap) return;
         const s = scale.get();
-        cx.set(dragStart.current.cx - dx / s);
-        cy.set(dragStart.current.cy - dy / s);
+        const { x: mvx, y: mvy } = toMapVector(dx, dy);
+        cx.set(dragStart.current.cx - mvx / s);
+        cy.set(dragStart.current.cy - mvy / s);
       },
       onWheel: ({ delta: [, dy], event }) => {
         event.preventDefault();
