@@ -444,11 +444,26 @@
     "mapNumber": 12
   },
   {
+    "id": "place.bus-area",
+    "type": "service",
+    "name": "Bus Area",
+    "aliases": [
+      "bus area",
+      "bus stop",
+      "shuttle",
+      "bus"
+    ],
+    "anchors": [
+      "node-1789293356178-299"
+    ],
+    "startable": true
+  },
+  {
     "id": "place.gate.node-1789291954415-1",
     "type": "gate",
-    "name": "Gate",
+    "name": "South Gate",
     "aliases": [
-      "gate"
+      "south gate"
     ],
     "anchors": [
       "node-1789291954415-1"
@@ -458,9 +473,9 @@
   {
     "id": "place.gate.node-1789292030835-14",
     "type": "gate",
-    "name": "Gate",
+    "name": "Mosque Gate",
     "aliases": [
-      "gate"
+      "mosque gate"
     ],
     "anchors": [
       "node-1789292030835-14"
@@ -470,9 +485,9 @@
   {
     "id": "place.gate.node-1789292057012-17",
     "type": "gate",
-    "name": "Gate",
+    "name": "Gate 2",
     "aliases": [
-      "gate"
+      "gate 2"
     ],
     "anchors": [
       "node-1789292057012-17"
@@ -482,9 +497,9 @@
   {
     "id": "place.gate.node-1789292437171-106",
     "type": "gate",
-    "name": "Gate",
+    "name": "Gate 1 (Main Gate)",
     "aliases": [
-      "gate"
+      "gate 1 (main gate)"
     ],
     "anchors": [
       "node-1789292437171-106"
@@ -494,9 +509,9 @@
   {
     "id": "place.gate.node-1789293253784-273",
     "type": "gate",
-    "name": "Gate",
+    "name": "Gate 4",
     "aliases": [
-      "gate"
+      "gate 4"
     ],
     "anchors": [
       "node-1789293253784-273"

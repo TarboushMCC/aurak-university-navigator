@@ -111,6 +111,26 @@ const AVG_SCALE =
 
 const toMap = ([x, y]: Point): Point => [(x - originX) * AVG_SCALE, (y - originY) * AVG_SCALE];
 const toMapRing = (ring: readonly Point[]): Point[] => ring.map(toMap);
+
+// AURAK only has one officially-numbered gate (Gate 1, legend #1); every
+// other opening in the boundary fence is a real, separately-walkable gate
+// but has no official name to trace. Name it by where it sits on the
+// boundary (thirds of the site's width/height) instead of leaving every one
+// labeled the same generic "Gate" — that made them indistinguishable in
+// search results.
+const siteWidthM = boundaryPxWidth * AVG_SCALE;
+const siteHeightM = boundaryPxHeight * AVG_SCALE;
+const usedGateNames = new Map<string, number>();
+function cardinalGateName(x: number, y: number): string {
+  const fx = x / siteWidthM;
+  const fy = y / siteHeightM;
+  const ns = fy < 1 / 3 ? "North" : fy > 2 / 3 ? "South" : "";
+  const ew = fx < 1 / 3 ? "West" : fx > 2 / 3 ? "East" : "";
+  const base = `${ns}${ew}` ? `${ns}${ew} Gate` : "Central Gate";
+  const seen = usedGateNames.get(base) ?? 0;
+  usedGateNames.set(base, seen + 1);
+  return seen === 0 ? base : `${base} (${seen + 1})`;
+}
 const centroidOf = (ring: readonly Point[]): Point => [
   ring.reduce((s, p) => s + p[0], 0) / ring.length,
   ring.reduce((s, p) => s + p[1], 0) / ring.length,
@@ -375,6 +395,13 @@ for (const shape of trace.shapes) {
     continue;
   }
 
+  if (/bus/i.test(name)) {
+    features.push({ id: nextId("plaza"), layer: "plaza", geometry: { type: "Polygon", coordinates: [toMapRing(shape.points)] }, label: "Bus Area", placeId: "place.bus-area" });
+    upsertPlace({ id: "place.bus-area", type: "service", name: "Bus Area", aliases: ["bus area", "bus stop", "shuttle", "bus"], anchors: [], startable: true });
+    addAnchorGeom("place.bus-area", toMapRing(shape.points));
+    continue;
+  }
+
   if (/gate/i.test(name)) {
     const centroid = centroidOf(toMapRing(shape.points));
     features.push({ id: nextId("gate"), layer: "gate", geometry: { type: "Point", coordinates: centroid }, label: "AURAK Main Gate", mapNumber: LEGEND_NUMBERS.mainGate, placeId: "place.gate1" });
@@ -439,7 +466,7 @@ if (mainGateCentroid && gateNodes.length > 0) {
 for (const node of gateNodes) {
   if (node.id === mainGateNodeId) continue;
   const placeId = `place.gate.${node.id}`;
-  const name = node.name || "Gate";
+  const name = node.name || cardinalGateName(node.x, node.y);
   features.push({ id: nextId("gate"), layer: "gate", geometry: { type: "Point", coordinates: [node.x, node.y] }, label: name, placeId });
   places.push({ id: placeId, type: "gate", name, aliases: [name.toLowerCase()], anchors: [node.id], startable: true });
 }

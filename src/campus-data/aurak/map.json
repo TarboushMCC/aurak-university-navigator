@@ -2239,7 +2239,36 @@
       "placeId": "place.football-field"
     },
     {
-      "id": "gate-i",
+      "id": "plaza-i",
+      "layer": "plaza",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              193.50582277753983,
+              153.52504844682247
+            ],
+            [
+              204.91192047478415,
+              153.52504844682247
+            ],
+            [
+              204.91192047478415,
+              205.5368539462567
+            ],
+            [
+              193.50582277753983,
+              205.5368539462567
+            ]
+          ]
+        ]
+      },
+      "label": "Bus Area",
+      "placeId": "place.bus-area"
+    },
+    {
+      "id": "gate-j",
       "layer": "gate",
       "geometry": {
         "type": "Point",
@@ -2248,11 +2277,11 @@
           326.7570814169962
         ]
       },
-      "label": "Gate",
+      "label": "South Gate",
       "placeId": "place.gate.node-1789291954415-1"
     },
     {
-      "id": "gate-j",
+      "id": "gate-k",
       "layer": "gate",
       "geometry": {
         "type": "Point",
@@ -2261,11 +2290,11 @@
           289.1169590160898
         ]
       },
-      "label": "Gate",
+      "label": "Mosque Gate",
       "placeId": "place.gate.node-1789292030835-14"
     },
     {
-      "id": "gate-k",
+      "id": "gate-l",
       "layer": "gate",
       "geometry": {
         "type": "Point",
@@ -2274,11 +2303,11 @@
           338.8475449760752
         ]
       },
-      "label": "Gate",
+      "label": "Gate 2",
       "placeId": "place.gate.node-1789292057012-17"
     },
     {
-      "id": "gate-l",
+      "id": "gate-m",
       "layer": "gate",
       "geometry": {
         "type": "Point",
@@ -2287,11 +2316,11 @@
           188.1766059450005
         ]
       },
-      "label": "Gate",
+      "label": "Gate 1 (Main Gate)",
       "placeId": "place.gate.node-1789292437171-106"
     },
     {
-      "id": "gate-m",
+      "id": "gate-n",
       "layer": "gate",
       "geometry": {
         "type": "Point",
@@ -2300,7 +2329,7 @@
           42.930272862363424
         ]
       },
-      "label": "Gate",
+      "label": "Gate 4",
       "placeId": "place.gate.node-1789293253784-273"
     }
   ]

@@ -20,6 +20,7 @@ export const LAYER_CATEGORY: Partial<Record<MapFeature["layer"], BuildingCategor
   parking: "facilities",
   gate: "landmark",
   lawn: "landmark",
+  plaza: "services",
 };
 
 /**

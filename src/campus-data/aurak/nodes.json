@@ -74,7 +74,8 @@
     "x": 473.8216386690269,
     "y": 289.1169590160898,
     "floor": 0,
-    "indoor": false
+    "indoor": false,
+    "name": "Mosque Gate"
   },
   {
     "id": "node-1789292057012-16",
@@ -94,7 +95,8 @@
     "x": 165.62887888948464,
     "y": 338.8475449760752,
     "floor": 0,
-    "indoor": false
+    "indoor": false,
+    "name": "Gate 2"
   },
   {
     "id": "node-1789292057012-18",
@@ -464,7 +466,8 @@
     "x": 572.3441637963407,
     "y": 188.1766059450005,
     "floor": 0,
-    "indoor": false
+    "indoor": false,
+    "name": "Gate 1 (Main Gate)"
   },
   {
     "id": "node-1789292583145-110",
@@ -1015,7 +1018,8 @@
     "x": 244.35765945856025,
     "y": 42.930272862363424,
     "floor": 0,
-    "indoor": false
+    "indoor": false,
+    "name": "Gate 4"
   },
   {
     "id": "node-1789293268837-275",
